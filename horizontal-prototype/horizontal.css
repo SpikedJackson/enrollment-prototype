@@ -75,3 +75,10 @@ body {
   top: -25px;
   left: 25%;
 }
+
+header {
+  background-color: #666;
+  text-align: center;
+  font-size: 30px;
+  color: white;
+}
