@@ -2,121 +2,140 @@
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <style>
-        ul, #myUL {
-          list-style-type: none;
-        }
-        
-        #myUL {
-          margin: 0;
-          padding: 0;
-        }
-        
-        .caret {
-          cursor: pointer;
-          -webkit-user-select: none; /* Safari 3.1+ */
-          -moz-user-select: none; /* Firefox 2+ */
-          -ms-user-select: none; /* IE 10+ */
-          user-select: none;
-        }
-        
-        .caret::before {
-          content: "\25B6";
-          color: black;
-          display: inline-block;
-          margin-right: 6px;
-        }
-        
-        .caret-down::before {
-          -ms-transform: rotate(90deg); /* IE 9 */
-          -webkit-transform: rotate(90deg); /* Safari */
-          transform: rotate(90deg);  
-        }
-        
-        .nested {
-          display: none;
-        }
-        
-        .active {
-          display: block;
-        }
-        </style>
-        <title>Academic Planner</title>
+        <link href="planner.css" rel="stylesheet" />
+        <!-- react scripts (unused)-->
         <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-
-        <!-- Don't use this in production: -->
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+        <title>Academic Planner</title>
     </head>
     <body>
-        <div id="root"></div>
-        <script type="text/babel">
-            
-        
-        function MyApp() {
-            return <div><h1>Academic Planner</h1><h2>My Requirements</h2></div>;
-        }
-
-        const container = document.getElementById('root');
-        const root = ReactDOM.createRoot(container);
-        root.render(<div><MyApp /></div>);
-
-        </script>
-        <!--
-        Note: this page is a great way to try React but it's not suitable for production.
-        It slowly compiles JSX with Babel in the browser and uses a large development build of React.
-
-        Read this page for starting a new React project with JSX:
-        https://react.dev/learn/start-a-new-react-project
-
-        Read this page for adding React with JSX to an existing project:
-        https://react.dev/learn/add-react-to-an-existing-project
-        -->
-        <ul id="myUL">
-            <li><span class="caret">Admission Requirements</span>
-                <ul class="nested">
-                <li><span class="caret">Compsci Requirements</span>
-                    <ul class="nested">
-                    <li>COMPSCI 1XC3</li>
+        <h1><center>Academic Planner</center></h1>
+        <div class="container">
+            <!-- COLUMN 1 -->
+            <div class="box">
+                <h1>My Requirements</h1>
+                <div>
+                    <ul id="myUL">
+                        <li><span class="caret">Admission Requirements</span>
+                            <ul class="nested">
+                            <li><span class="caret">COMPSCI Requirements</span>
+                                <ul class="nested">
+                                <li>COMPSCI 1DM3</li>
+                                <li>COMPSCI 1JC3</li>
+                                <li>COMPSCI 1MD3</li>
+                                <li>COMPSCI 1XC3</li>
+                                <li>COMPSCI 1XD3</li>
+                                </ul>
+                            </li>
+                            <li><span class="caret">MATH Requirements</span>
+                                <ul class="nested">
+                                <li>MATH 1B03</li>
+                                <li>MATH 1ZA3</li>
+                                <li>MATH 1ZB3</li>
+                                </ul>
+                            </li>
+                            <li><span class="caret">Electives</span>
+                                <ul class="nested">
+                                <li>6 Units</li>
+                                </ul>
+                            </li>
+                            <li><span class="caret">Other</span>
+                                <ul class="nested">
+                                <li>ENGINEER 1A00 or WHMIS 1A00</li>
+                                </ul>
+                            </li>
+                            </ul>
+                        </li>
+                        <li><span class="caret">Level 2 Requirements</span>
+                            <ul class="nested">
+                            <li><span class="caret">COMPSCI Requirements</span>
+                                <ul class="nested">
+                                <li>COMPSCI 2LC3</li>
+                                </ul>
+                            </li>
+                            <li><span class="caret">Electives</span>
+                                <ul class="nested">
+                                <li>MATH 2X03</li>
+                                </ul>
+                            </li>
+                            </ul>
+                        </li>
+                        <li><span class="caret">Level 3 Requirements</span>
+                            <ul class="nested">
+                            <li><span class="caret">Compsci Requirements</span>
+                                <ul class="nested">
+                                <li>COMPSCI 3MI3</li>
+                                </ul>
+                            </li>
+                            <li><span class="caret">Electives</span>
+                                <ul class="nested">
+                                <li>MATH 3IA3</li>
+                                </ul>
+                            </li>
+                            </ul>
+                        </li>
+                        <li><span class="caret">Level 4 Requirements</span>
+                            <ul class="nested">
+                            <li><span class="caret">Compsci Requirements</span>
+                                <ul class="nested">
+                                <li>COMPSCI 4HC3</li>
+                                </ul>
+                            </li>
+                            <li><span class="caret">Electives</span>
+                                <ul class="nested">
+                                <li>MATH 123</li>
+                                </ul>
+                            </li>
+                            </ul>
+                        </li>
                     </ul>
-                </li>
-                <li><span class="caret">Math Requirements</span>
-                    <ul class="nested">
-                    <li>MATH 1B03</li>
-                    </ul>
-                </li>
-                </ul>
-            </li>
-            <li><span class="caret">Level 2 Requirements</span>
-                <ul class="nested">
-                <li><span class="caret">Compsci Requirements</span>
-                    <ul class="nested">
-                    <li>COMPSCI 2LC3</li>
-                    </ul>
-                </li>
-                <li><span class="caret">Math Requirements</span>
-                    <ul class="nested">
-                    <li>MATH 2X03</li>
-                    </ul>
-                </li>
-                </ul>
-            </li>
-        </ul>
-        <script>
-            var toggler = document.getElementsByClassName("caret");
-            var i;
-            
-            for (i = 0; i < toggler.length; i++) {
-              toggler[i].addEventListener("click", function() {
-                this.parentElement.querySelector(".nested").classList.toggle("active");
-                this.classList.toggle("caret-down");
-              });
-            }
-        </script>
-
-        <p>Feel free to go back to other pages ->></p>
-        <p><a href="../horizontal-prototype/horizontal-main.html">Horizontal Prototype</a></p>
-        <p><a href="../enrollment-prototype/enrollment-main.html">Enrollment Prototype</a></p>
-        <p><a href="../planner-prototype/planner-main.html">Planner Prototype</a></p>
+                </div>
+                <p>Feel free to go back to other pages ->></p>
+                <p><a href="../horizontal-prototype/horizontal-main.html">Horizontal Prototype</a></p>
+                <p><a href="../enrollment-prototype/enrollment-main.html">Enrollment Prototype</a></p>
+                <p><a href="../planner-prototype/planner-main.html">Planner Prototype</a></p>
+            </div>
+            <!-- COLUMN 2 -->
+            <div class="box">
+                <!-- CLICKING THESE BUTTONS SHOULD CHANGE WHAT APPEARS IN THE TABLE -->
+                <button>All Years</button>
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+                <button>4</button>
+                <button>+</button>
+                <table>
+                    <tr>
+                        <th>COMPSCI 2LC3</th>
+                        <th>Enrolled<br>Taught by RJ</th>
+                    </tr>
+                    <tr>
+                        <th>COMPSCI 2ME3</th>
+                        <th>Planned<br>Taught by Maccio</th>
+                    </tr>
+                </table>
+            </div>
+            <!-- COLUMN 3 -->
+            <div class="box">
+                <div class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input">
+                    <button class="search-button">
+                        <img src = "../horizontal-prototype/images/search.png" class = "button-image">
+                    </button>
+                </div>
+            </div>
+            <script type="text/babel">
+                function MyApp() {
+                return (
+                    <div><h1>Hi (In React)</h1></div>
+                );
+                }
+                const container = document.getElementById('root');
+                const root = ReactDOM.createRoot(container);
+                root.render(<MyApp />);
+            </script>
+        </div>
+        <script src="caret-script.js"></script>
     </body>
 </html>
