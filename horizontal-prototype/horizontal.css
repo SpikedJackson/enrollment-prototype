@@ -4,12 +4,16 @@ body {
     padding: 0;
 }
 
+.page {
+    width: 100%;
+    display: flex;
+}
 
 .container {
     width : 100%;
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: 10px;
 }
 
 .box {
@@ -21,11 +25,11 @@ body {
 }
 
 
-.search-container {
+.select-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
+    height: 42px;
 }
 
 .search-input {
@@ -36,7 +40,7 @@ body {
     outline: none;
 }
 
-.search-button {
+.select-button {
     padding: 10px 15px;
 
     border: 2px solid #ADAABF;
@@ -44,7 +48,7 @@ body {
     cursor: pointer;
 }
 
-.search-button:hover {
+.select-button:hover {
     background-color: #ADAABF; /* Darker green on hover */
 }
 
@@ -53,25 +57,16 @@ body {
     height: 15px; /* Image height */
 }
 
-
-.filter-container {
+.select-container-help {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
+    height: 42px;
+    margin-left: auto;
 }
 
-.filter-button {
-    padding: 10px 15px;
 
-    border: 2px solid #ADAABF;
-    border-radius: 0 4px 4px 0; /* Rounded right corners */
-    cursor: pointer;
-}
 
-.filter-button:hover {
-    background-color: #ADAABF; /* Darker green on hover */
-}
 
 
 
@@ -80,7 +75,7 @@ body {
   height: 0;
   position: relative;
   border-right: 45px solid transparent;
-  border-top: 35px solid #acb0b7;
+  border-top: 35px solid #ADAABF;
   border-left: 45px solid transparent;
   transform: rotate(-90deg) translate(-70%, -185px);
   transform-origin: center;
@@ -98,35 +93,46 @@ body {
 }
 
 .to_planner:hover {
-  border-top: 35px solid #ADAABF;
+  border-top: 35px solid #5D576B;
 }
 
 .to_schedule{
-  float: right;
   
+  /* float: right; */
   border: 2px solid #ADAABF;
-  
   border-radius: 4px 4px 4px 4px;
-  transform: translate(-10px, 435px);
-  padding: 10px 30px;
+  background-color: #ADAABF;
+
+  /* transform: translate(-10px, 535px); */
+  
+  position: fixed; /* Fixed positioning */
+  bottom: 20px;    /* 20px from the bottom */
+  right: 20px;
+  padding: 10px 20px;
+
+  width: 90px;
+
+  
   
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
 .to_schedule a{
-  background-color: solid #ADAABF;
+  
   text-align: center;
   text-decoration: none;
   color: black;
+  
 }
 
 .to_schedule:hover {
-    border: 2px solid #1309a0;
+    border: 2px solid #5D576B;
+    background-color: #5D576B;
 }
 
 header {
-  background-color: #666;
+  background-color: #ADAABF;
   text-align: center;
   font-size: 40px;
   color: white;
