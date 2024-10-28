@@ -1,0 +1,85 @@
+.box {
+  padding: 20px;
+  margin: 10px;
+  flex: 1; /* Makes all boxes take equal space */
+  text-align: center;
+}
+.container {
+  width : 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+ul, #myUL {
+  list-style-type: none;
+  text-align: left;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #4CAF50;
+  border-radius: 4px 0 0 4px; /* Rounded left corners */
+  outline: none;
+}
+
+.search-button {
+  padding: 10px 15px;
+
+  border: 2px solid #4CAF50;
+  border-radius: 0 4px 4px 0; /* Rounded right corners */
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.button-image {
+  width: 15px; /* Image width */
+  height: 15px; /* Image height */
+}
+
+table, th, td {
+  border: 1px solid black;
+}
