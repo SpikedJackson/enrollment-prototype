@@ -63,6 +63,16 @@ ul,
   border: 2px solid #8B85C1;
 }
 
+.search-dropdown {
+  position: absolute; /* Position relative to parent */
+  /*z-index: 1000;  Ensure it's on top */
+  background-color: white; /* Background for dropdown */
+  border: 1px solid #ccc; /* Border for dropdown */
+  width: 100%; /* Match input width */
+  padding: 0;
+  margin: 0;
+}
+
 .button-image {
   width: 15px;
   /* Image width */
@@ -82,3 +92,4 @@ header {
   font-size: 40px;
   color: white;
 }
+

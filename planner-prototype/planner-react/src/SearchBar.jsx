@@ -1,20 +1,21 @@
 
 import React, { useState } from 'react';
+import courses from './courses.js'
 
 const SearchBar = () => {
     const [inputValue, setInputValue] = useState('');
     const [suggestions, setSuggestions] = useState([]);
 
-    // Sample data for suggestions
-    const data = ['COMPSCI 2ME3', 'COMPSCI 2LC3', 'COMPSCI 2C03', 'COMPSCI 2AC3', 'COMPSCI 3MEI', 'COMPSCI 3IS3'];
+
 
     const handleChange = (event) => {
         const value = event.target.value;
         setInputValue(value);
 
         if (value) {
-            const filteredSuggestions = data.filter(item =>
-                item.toLowerCase().includes(value.toLowerCase())
+            const filteredSuggestions = courses.filter(course =>
+                course.name.toLowerCase().includes(value.toLowerCase()) || //make sure comparison between input and stored data is case sensitiv4
+                course.code.toLowerCase().includes(value.toLowerCase())
             );
             setSuggestions(filteredSuggestions);
         } else {
@@ -22,64 +23,60 @@ const SearchBar = () => {
         }
     };
 
-    const handleSuggestionClick = (suggestion) => {
-        setInputValue(suggestion);
-        setSuggestions([]); // Clear suggestions
+    const handleSuggestionClick = (course) => {
+        setInputValue(course);
+        setSuggestions([]); // clear suggestions
+        
     };
 
     return (
-        <>
-            <div style={{position: 'absolute'}}>
-                <div class="select-container">
-                    <input
-                        type="text"
-                        class="search-input"
-                        value={inputValue}
-                        onChange={handleChange}
-                        placeholder="Search..."
-                        style={{ width: '100%', padding: '10px' }}
-                    />
-                    <button class="select-button">
-                            <img src = {require('./images/search.png')} class = "button-image"/>
+        <div style={{ position: 'relative'}}>
+            <div style={{ display: 'flex', alignItems: 'center' }}>
+                <input
+                    type="text"
+                    value={inputValue.code}
+                    onChange={handleChange}
+                    placeholder="Search for a course..."
+                    className="search-input"
+                />
+                <div className="select-container">
+                    <button className="select-button">
+                        <img src={require('./images/search.png')} alt="Search" className="button-image" />
                     </button>
-                    {suggestions.length > 0 && (
-                        <ul style={{
-                            position: 'absolute',
-                            top: '100%',
-                            left: 0,
-                            right: 0,
-                            border: '1px solid #ccc',
-                            backgroundColor: 'white',
-                            margin: 0,
-                            padding: 0,
-                            listStyleType: 'none',
-                            zIndex: 1000
-                        }}>
-                            {suggestions.map((suggestion, index) => (
-                                <li
-                                    key={index}
-                                    onClick={() => handleSuggestionClick(suggestion)}
-                                    style={{
-                                        padding: '10px',
-                                        cursor: 'pointer',
-                                        borderBottom: '1px solid #ccc'
-                                    }}
-                                    onMouseEnter={(e) => e.target.style.backgroundColor = '#f0f0f0'}
-                                    onMouseLeave={(e) => e.target.style.backgroundColor = 'white'}
-                                >
-                                    {suggestion}
-                                </li>
-                            ))}
-                        </ul>
-                    )}
+                </div>
+                <div className="select-container">
+                    <button className="select-button">
+                        <img src={require('./images/filter.png')} alt="Filter" className="button-image" />
+                    </button>
                 </div>
             </div>
-            <div class="select-container">
-            <button class="select-button">
-                <img src = {require('./images/filter.png')} class = "button-image"/>
-            </button>
+            {suggestions.length > 0 && (
+                <ul className="search-dropdown">
+                    {suggestions.map((course, index) => (
+                        <li
+                            key={index}
+                            onClick={() => handleSuggestionClick(course)}
+                            style={{
+                                padding: '10px',
+                                cursor: 'pointer',
+                                borderBottom: '1px solid #D4CDF4',
+                                borderRight: '1px solid #D4CDF4',
+                                borderLeft: '1px solid #D4CDF4',
+                            }}
+                            onMouseEnter={(e) => e.target.style.backgroundColor = '#D4CDF4'}
+                            onMouseLeave={(e) => e.target.style.backgroundColor = 'white'}
+                        >
+                            {course.code} - {course.name}
+                        </li>
+                    ))}
+                </ul>
+            )}
+            {inputValue && (
+                <div style={{ marginTop: '10px' }}>
+                    <strong>Selected Course:</strong> {inputValue.code} - {inputValue.name}
+                </div>
+            )}
         </div>
-    </>
     );
 };
 
