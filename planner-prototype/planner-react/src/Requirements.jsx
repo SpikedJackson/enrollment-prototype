@@ -47,5 +47,4 @@ function Requirements() {
     );
 }
 
-
 export default Requirements;

@@ -29,7 +29,7 @@ const SearchBar = () => {
 
     return (
         <>
-            <div style={{ position: 'relative'}}>
+            <div style={{position: 'absolute'}}>
                 <div class="select-container">
                     <input
                         type="text"
