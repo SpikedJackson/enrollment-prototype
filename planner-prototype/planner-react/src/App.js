@@ -3,6 +3,7 @@ import './App.css';
 import Header from './Header';
 import SearchBar from './SearchBar';
 import Requirements from './Requirements';
+import Planner from './Planner';
 
 function App() {
   return (
@@ -14,6 +15,9 @@ function App() {
         </div>
         <div className="box">
           <Requirements />
+        </div>
+        <div className="box">
+          <Planner />
         </div>
       </div>
 
