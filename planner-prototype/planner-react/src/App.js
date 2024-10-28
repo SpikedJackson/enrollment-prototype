@@ -11,8 +11,11 @@ function App() {
         <div class="box">
           <SearchBar />
         </div>
+        <div class="box">
+          <Requirements />
+        </div>
       </div>
-      
+
     </div>
   );
 }
