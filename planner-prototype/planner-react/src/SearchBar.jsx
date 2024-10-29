@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import courses from './courses.js'
 
-const SearchBar = () => {
+const SearchBar = ({ onCourseSelect }) => {
     const [inputValue, setInputValue] = useState('');
     const [suggestions, setSuggestions] = useState([]);
 
@@ -14,7 +14,7 @@ const SearchBar = () => {
 
         if (value) {
             const filteredSuggestions = courses.filter(course =>
-                course.name.toLowerCase().includes(value.toLowerCase()) || //make sure comparison between input and stored data is case sensitiv4
+                course.name.toLowerCase().includes(value.toLowerCase()) || //make sure comparison between input and stored data is case sensitive
                 course.code.toLowerCase().includes(value.toLowerCase())
             );
             setSuggestions(filteredSuggestions);
@@ -26,6 +26,7 @@ const SearchBar = () => {
     const handleSuggestionClick = (course) => {
         setInputValue(course);
         setSuggestions([]); // clear suggestions
+        onCourseSelect(course);
         
     };
 
@@ -70,11 +71,6 @@ const SearchBar = () => {
                         </li>
                     ))}
                 </ul>
-            )}
-            {inputValue && (
-                <div style={{ marginTop: '10px' }}>
-                    <strong>Selected Course:</strong> {inputValue.code} - {inputValue.name}
-                </div>
             )}
         </div>
     );

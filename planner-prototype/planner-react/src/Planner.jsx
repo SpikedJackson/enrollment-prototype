@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-const Planner = (course=null) => {
+const Planner = ({course}) => {
 
     return (
         <div className="Planner">
+            <p>{course.name}</p>
         </div>
     );
 };

@@ -3,7 +3,8 @@ import './App.css';
 import Header from './Header';
 import SearchBar from './SearchBar';
 import Requirements from './Requirements';
-import YearSelect from './YearSelect';
+import Planner from './Planner';
+import PlanCourse from './PlanCourse';
 
 function App() {
   return (
@@ -11,14 +12,9 @@ function App() {
       <Header />
       <div className="container">
         <div className="box">
-          <SearchBar />
-        </div>
-        <div className="box">
           <Requirements />
         </div>
-        <div className="box">
-          <YearSelect />
-        </div>
+        <PlanCourse />
       </div>
 
     </div>
