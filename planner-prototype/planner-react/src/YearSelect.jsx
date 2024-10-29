@@ -10,6 +10,7 @@ const YearSelect = () => {
         newYears.push(newYears.length + 1);
         setYears(newYears);
     }
+
     const handleYearClick = (year) => {
         setAllYears(false);
         setCurrentYear(year);
