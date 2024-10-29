@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Planner = () => {
+const YearSelect = () => {
     const [years, setYears] = useState([1, 2, 3, 4]);
     const [allYears, setAllYears] = useState(false);
     const [currentYear, setCurrentYear] = useState(1);
@@ -16,7 +16,7 @@ const Planner = () => {
     }
 
     return (
-        <div className="Planner">
+        <div className="YearSelect">
             <button onClick={() => setAllYears(true)}>All Years</button>
             {years.map((year) => (
                 <button onClick={() => handleYearClick(year)}>{year}</button>
@@ -27,4 +27,4 @@ const Planner = () => {
     );
 };
 
-export default Planner;
+export default YearSelect;
