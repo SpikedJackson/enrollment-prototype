@@ -6,6 +6,9 @@ import CourseTable from './CourseTable';
 
 const PlanCourse = () => {
     const [selectedCourses, setSelectedCourses] = useState([]);
+    const [currentYear, setCurrentYear] = useState(1);
+    const [allYears, setAllYears] = useState(false);
+    const [years, setYears] = useState([1, 2, 3, 4]);
 
     const handleCourseSelect = (course) => {
         if (!selectedCourses.some(selected => selected.code === course.code)) {
@@ -21,12 +24,12 @@ const PlanCourse = () => {
     return (
         <>
             <div className="box">
-                <SearchBar onCourseSelect={handleCourseSelect} />
+                <SearchBar onCourseSelect={handleCourseSelect} years = {years}/>
             </div>
             <div className="box">
                 <div className="vertical-stack-container">
-                    <YearSelect />
-                    {selectedCourses.length > 0 && <CourseTable courses={selectedCourses} onCourseRemove={handleCourseRemove}/>}
+                    <YearSelect currentYear = {currentYear} setCurrentYear = {setCurrentYear} allYears={allYears} setAllYears={setAllYears} years={years} setYears={setYears}/>
+                    {selectedCourses.length > 0 && <CourseTable courses={selectedCourses} onCourseRemove = {handleCourseRemove} allYears={allYears} currentYear={currentYear}/>}
                 </div>
             </div>
         </>

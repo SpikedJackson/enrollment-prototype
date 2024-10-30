@@ -1,14 +1,15 @@
 import React from 'react';
 
-const CourseTable = ({ courses, onCourseRemove }) => {
+const CourseTable = ({ courses, onCourseRemove, allYears, currentYear }) => {
     return (
         <div className="course-container">
             {courses.length > 0 ? (
                 <ul>
                     {courses.map((course) => (
+                        (allYears || course.year === currentYear) && 
                         <li key={course.code}>
                             <div className="course-box">
-                                {course.code} - {course.name}
+                                {course.code} - {course.name} - {course.year}
                                     <button onClick={() => onCourseRemove(course)} style={{ marginLeft: '10px'}}>
                                         <img src={require('./images/delete.png')} className="button-image"/>
                                     </button>

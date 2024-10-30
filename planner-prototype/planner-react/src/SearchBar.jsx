@@ -2,11 +2,14 @@
 import React, { useState } from 'react';
 import courses from './courses.js'
 
-const SearchBar = ({ onCourseSelect }) => {
+const SearchBar = ({ onCourseSelect, years}) => {
     const [inputValue, setInputValue] = useState('');
     const [suggestions, setSuggestions] = useState([]);
+    const [selectedYear, setSelectedYear] = useState(1);
 
-
+    const handleYearChange = (event) => {
+        setSelectedYear(Number(event.target.value));
+    }
 
     const handleChange = (event) => {
         const value = event.target.value;
@@ -24,10 +27,10 @@ const SearchBar = ({ onCourseSelect }) => {
     };
 
     const handleSuggestionClick = (course) => {
+        course.year = selectedYear
         setInputValue(course);
         setSuggestions([]); // clear suggestions
         onCourseSelect(course);
-        
     };
 
     return (
@@ -50,6 +53,12 @@ const SearchBar = ({ onCourseSelect }) => {
                         <img src={require('./images/filter.png')} alt="Filter" className="button-image" />
                     </button>
                 </div>
+                Select Year: 
+                <form>
+                    {years.map((year) => (
+                        <input type="radio" value={year} name="year_select" checked={selectedYear===year} onChange = {handleYearChange}/>
+                    ))}
+                </form>
             </div>
             {suggestions.length > 0 && (
                 <ul className="search-dropdown">
