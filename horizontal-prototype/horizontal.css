@@ -97,8 +97,68 @@ body {
     font-weight: bold; 
 }
 
+/*Tabs*/
+.tab {
+    overflow: hidden;
+    background-color: #D4CDF4;
+    width: 500px;
+    height:max-content;
+    border-radius: 4px;
+}
+
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.4s;
+    font-size: 17px;
+}
+    
+.tab button:hover {
+    background-color: #8B85C1;
+}
+
+.tab button.active {
+    background-color: #9f98de;
+}
+
+.tab-content {
+    display: none;
+    align-items: center;
+}
+
+.course-box2 {
+    display: flex; 
+    align-content: center; 
+    justify-content: center;
+    border: 1px solid #ccc; 
+    border-radius: 4px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    width: 500px; 
+    height: 100px;
+}
+
+.course-box2 div{
+    background-color: bisque;
+    align-items: center; 
+    text-align: center;
+    border: 1px solid black;
+    width: 100%;
+    height: fit-content;
+    padding: 1%;
+
+}
 
 
+.info-name {
+    display: flex;
+    flex-direction: row;
+    border: 1px solid black;
+    padding: 1px 100px;
+}
 
 
 
@@ -135,18 +195,11 @@ body {
   border: 2px solid #D4CDF4;
   border-radius: 4px 4px 4px 4px;
   background-color: #D4CDF4;
-
-  /* transform: translate(-10px, 535px); */
   
   position: fixed; /* Fixed positioning */
-  bottom: 20px;    /* 20px from the bottom */
-  right: 20px;
-  padding: 10px 20px;
-
-  width: 90px;
-
-  
-  
+  bottom: 15px;    /* 20px from the bottom */
+  right: 15px;
+  padding: 10px 15px;
   transition-duration: 0.4s;
   cursor: pointer;
 }
