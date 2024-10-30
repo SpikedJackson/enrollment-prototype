@@ -19,7 +19,9 @@
   flex-direction: column;     
   align-items: center;         
   justify-content: flex-start; /* align items at the top */
-  width: 100%;
+  width: 50%;
+  margin-left: auto; 
+  margin-right: 0;
 }
 
 ul,
@@ -45,7 +47,7 @@ ul,
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 42px;
+  max-height: 42px;
 }
 
 .search-input {
@@ -96,7 +98,7 @@ td {
 }
 
 header {
-  background-color: #D4CDF4;
+  background-color: #8B85C1;
   text-align: center;
   font-size: 40px;
   color: white;
@@ -118,8 +120,7 @@ header {
 
 .course-container {
   display: flex;
-  flex-direction: column; /* Stacks items vertically */
-  width: 75%;
+  flex-direction: column; 
 }
 
 .course-box {
@@ -133,5 +134,10 @@ header {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
   min-height: 40px;
   margin-bottom: 10px;
+}
+
+.year-select {
+  display: flex;
+  flex-direction: row;
 }
 
