@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CourseTable = ({ courses }) => {
+const CourseTable = ({ courses, onCourseRemove }) => {
     return (
         <div className="course-container">
             {courses.length > 0 ? (
@@ -9,6 +9,9 @@ const CourseTable = ({ courses }) => {
                         <li key={course.code}>
                             <div className="course-box">
                                 {course.code} - {course.name}
+                                    <button onClick={() => onCourseRemove(course)} style={{ marginLeft: '10px'}}>
+                                        <img src={require('./images/delete.png')} className="button-image"/>
+                                    </button>
                             </div>
                         </li>
                     ))}
