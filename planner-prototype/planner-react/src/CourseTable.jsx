@@ -8,7 +8,7 @@ const CourseTable = ({ courses, onCourseRemove }) => {
                     {courses.map((course) => (
                         <li key={course.code}>
                             <div className="course-box">
-                                {course.code} - {course.name}
+                                {course.code} - {course.name} - {course.year}
                                     <button onClick={() => onCourseRemove(course)} style={{ marginLeft: '10px'}}>
                                         <img src={require('./images/delete.png')} className="button-image"/>
                                     </button>

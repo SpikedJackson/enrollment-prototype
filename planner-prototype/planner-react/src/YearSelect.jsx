@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 
-const YearSelect = () => {
+const YearSelect = ({currentYear, setCurrentYear}) => {
     const [years, setYears] = useState([1, 2, 3, 4]);
     const [allYears, setAllYears] = useState(false);
-    const [currentYear, setCurrentYear] = useState(1);
 
     const handlePlusClick = () => {
         var newYears = years.slice();

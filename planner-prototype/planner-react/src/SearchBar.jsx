@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import courses from './courses.js'
 
-const SearchBar = ({ onCourseSelect }) => {
+const SearchBar = ({ onCourseSelect, year }) => {
     const [inputValue, setInputValue] = useState('');
     const [suggestions, setSuggestions] = useState([]);
 
@@ -24,10 +24,10 @@ const SearchBar = ({ onCourseSelect }) => {
     };
 
     const handleSuggestionClick = (course) => {
+        course.year = year
         setInputValue(course);
         setSuggestions([]); // clear suggestions
         onCourseSelect(course);
-        
     };
 
     return (
