@@ -2,7 +2,7 @@ function Header() {
     return(
         <>
             <header>
-                <div><strong>Academic Planner</strong></div>
+                <div><strong>Enrollment</strong></div>
             </header>
         </>
       )

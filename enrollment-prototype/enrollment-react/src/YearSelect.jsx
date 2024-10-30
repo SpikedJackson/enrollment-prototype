@@ -17,15 +17,23 @@ const YearSelect = () => {
     }
 
     return (
-        <div className="YearSelect">
-            <button onClick={() => setAllYears(true)}>All Years</button>
+        <div className="year-select">
+            <div className="select-container">
+                <button onClick={() => setAllYears(true)} className="select-button">All Years</button>
+            </div>
             {years.map((year) => (
-                <button onClick={() => handleYearClick(year)}>{year}</button>
+                <div className="select-container">
+                    <button onClick={() => handleYearClick(year)} className="select-button">{year} </button>
+                </div>
             ))}
-            <button onClick={() => handlePlusClick()}>+</button>
+            <div className="select-container">
+                <button onClick={() => handlePlusClick()} className="select-button">+</button>
+            </div>
+            
             <br />{allYears ? "All Years" : currentYear}
         </div>
     );
 };
+
 
 export default YearSelect;
