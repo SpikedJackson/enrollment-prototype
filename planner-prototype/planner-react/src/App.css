@@ -1,0 +1,134 @@
+.box {
+  padding: 20px;
+  margin: 10px;
+  flex: 1;
+  /* Makes all boxes take equal space */
+  display: flex;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.vertical-stack-container {
+  display: flex;               
+  flex-direction: column;     
+  align-items: center;         
+  justify-content: flex-start; /* Align items at the top */
+}
+
+ul,
+#myUL {
+  list-style-type: none;
+  text-align: left;
+}
+
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+.nested {
+  display: none;
+}
+
+.active {
+  display: block;
+}
+
+.select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #D4CDF4;
+  border-radius: 4px 0 0 4px;
+  /* Rounded left corners */
+  outline: none;
+}
+
+.select-button {
+  padding: 10px 15px;
+
+  border: 2px solid #D4CDF4;
+  background-color: #D4CDF4;
+  border-radius: 4px;
+  /* Rounded corners */
+  cursor: pointer;
+}
+
+.select-button:hover {
+  background-color: #8B85C1;
+  border: 2px solid #8B85C1;
+}
+
+.search-dropdown {
+  position: absolute; /* Position relative to parent */
+  /*z-index: 1000;  Ensure it's on top */
+  background-color: white; /* Background for dropdown */
+  border: 1px solid #ccc; /* Border for dropdown */
+  width: 100%; /* Match input width */
+  padding: 0;
+  margin: 0;
+}
+
+.button-image {
+  width: 15px;
+  /* Image width */
+  height: 15px;
+  /* Image height */
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+}
+
+header {
+  background-color: #D4CDF4;
+  text-align: center;
+  font-size: 40px;
+  color: white;
+}
+
+.planner-table-table {
+  width: 100%;                
+  border-collapse: collapse;  
+}
+
+.planner-table th,
+.planner-table td {
+  width: 150px;              
+  border: 1px solid #ccc;   
+  padding: 10px;             
+  text-align: center;           
+}
+
+.course-container {
+  display: flex;
+  flex-direction: column; /* Stacks items vertically */
+  gap: 10px; /* Adds space between items */
+  margin-left: auto;
+}
+
+.course-box {
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  padding: 15px; 
+  border: 1px solid #ccc; 
+  border-radius: 8px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
+  width: 200px; 
+}
+
