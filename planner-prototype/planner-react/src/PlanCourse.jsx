@@ -14,6 +14,10 @@ const PlanCourse = () => {
         }
     };
 
+    const handleCourseRemove = (courseToRemove) => {
+        setSelectedCourses(selectedCourses.filter(course => course.code !== courseToRemove.code));
+    };
+
     return (
         <>
             <div className="box">
@@ -22,7 +26,7 @@ const PlanCourse = () => {
             <div className="box">
                 <div className="vertical-stack-container">
                     <YearSelect />
-                    {selectedCourses.length > 0 && <CourseTable courses={selectedCourses} />}
+                    {selectedCourses.length > 0 && <CourseTable courses={selectedCourses} onCourseRemove={handleCourseRemove}/>}
                 </div>
             </div>
         </>
