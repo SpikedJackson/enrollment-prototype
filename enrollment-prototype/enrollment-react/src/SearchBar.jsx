@@ -25,7 +25,7 @@ const SearchBar = ({ onCourseSelect }) => {
 
     const handleSuggestionClick = (course) => {
         setInputValue(course);
-        setSuggestions([]); // clear suggestions
+        setSuggestions([]); 
         onCourseSelect(course);
         
     };
