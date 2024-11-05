@@ -141,3 +141,51 @@ header {
   flex-direction: row;
 }
 
+.course-code {
+  font-size: 18px; 
+  font-weight: bold; 
+}
+
+.course-name {
+  font-size: 15px;
+  color: #525252;
+}
+
+/*Tabs*/
+.tab {
+  overflow: hidden;
+  background-color: #D4CDF4;
+  width: 500px;
+  height:max-content;
+  border-radius: 4px;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.4s;
+  font-size: 17px;
+}
+  
+.tab button:hover {
+  background-color: #8B85C1;
+}
+
+.tab button.active {
+  background-color: #9f98de;
+}
+
+
+.course-box2 {
+  text-align: center;
+  border: 1px solid #ccc; 
+  border-radius: 4px; /* Rounded corners */
+  background-color: #f9f9f9; /* Light background color */
+  width: 500px; 
+  height: 100px;
+}
+

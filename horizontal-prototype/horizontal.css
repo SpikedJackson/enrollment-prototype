@@ -144,21 +144,12 @@ body {
     height: 100px;
 }
 
-.course-box2 div{
-    background-color: bisque;
-    border: 1px solid black;
-    width: 100%;
-    height: fit-content;
-    
-}
-
-
-
 .to_planner {
   width: 300px;
   height: 0;
   position: fixed;
   top: 100px;
+  left: 0px;
   border-right: 45px solid transparent;
   border-top: 35px solid #D4CDF4;
   border-left: 45px solid transparent;
@@ -189,7 +180,7 @@ body {
   background-color: #D4CDF4;
   
   position: fixed; /* Fixed positioning */
-  bottom: 15px;    /* 20px from the bottom */
+  bottom: 15px;    /* 15px from the bottom */
   right: 15px;
   padding: 10px 15px;
   transition-duration: 0.4s;
@@ -209,8 +200,65 @@ body {
     background-color: #8B85C1;
 }
 
+.to_timetable {
+    width: 300px;
+    height: 0;
+    position: fixed;
+    top: 100px;
+    right: -185px;
+    border-right: 45px solid transparent;
+    border-top: 35px solid #D4CDF4;
+    border-left: 45px solid transparent;
+    transform: rotate(90deg) translate(70%, 0px);
+    transform-origin: center;
+    
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+
+  .to_timetable a{
+    position: absolute;
+    top: -25px;
+    left: 30%;
+    text-decoration: none;
+    color: black;
+  }
+  
+  .to_timetable:hover {
+    border-top: 35px solid #8B85C1;
+  }
+
+  .to_timetable2{
+  
+    /* float: right; */
+    border: 2px solid #D4CDF4;
+    border-radius: 4px 4px 4px 4px;
+    background-color: #D4CDF4;
+    
+    position: fixed; /* Fixed positioning */
+    bottom: 15px;    /* 15px from the bottom */
+    left: 15px;
+    padding: 10px 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  
+  .to_timetable2 a{
+    
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    
+  }
+
+  .to_timetable2:hover {
+    border: 2px solid #8B85C1;
+    background-color: #8B85C1;
+}
+
+
 header {
-  background-color: #D4CDF4;
+  background-color: #9f98de;
   text-align: center;
   font-size: 40px;
   color: white;

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SearchBar from './SearchBar'; 
 import YearSelect from './YearSelect'; 
 import CourseTable from './CourseTable'; 
+import Filters from './Filters';
 
 
 const PlanCourse = () => {
@@ -24,8 +25,11 @@ const PlanCourse = () => {
                 <SearchBar onCourseSelect={handleCourseSelect} />
             </div>
             <div className="box">
+                <Filters />
+            </div>
+            <div className="box">
                 <div className="vertical-stack-container">
-                    <YearSelect />
+                    {/* <YearSelect /> */}
                     {selectedCourses.length > 0 && <CourseTable courses={selectedCourses} onCourseRemove={handleCourseRemove}/>}
                 </div>
             </div>
