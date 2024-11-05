@@ -86,9 +86,7 @@ ul,
 
 .button-image {
   width: 15px;
-  /* Image width */
   height: 15px;
-  /* Image height */
 }
 
 table,
@@ -118,46 +116,27 @@ header {
   text-align: center;           
 }
 
-.course-container {
-  display: flex;
-  flex-direction: column; 
-}
 
-.course-box {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  padding: 10px; 
-  border: 1px solid #ccc; 
-  border-radius: 8px; /* round corners */
-  background-color: #f9f9f9; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  min-height: 40px;
-  margin-bottom: 10px;
-}
 
 .year-select {
   display: flex;
   flex-direction: row;
 }
 
-.course-code {
-  font-size: 18px; 
-  font-weight: bold; 
-}
 
-.course-name {
-  font-size: 15px;
-  color: #525252;
-}
 
 /*Tabs*/
 .tab {
   overflow: hidden;
   background-color: #D4CDF4;
-  width: 500px;
+  width: 100%;
   height:max-content;
   border-radius: 4px;
+}
+
+.tab-content {
+  width: 100%;
+  align-items: center;
 }
 
 .tab button {
@@ -179,13 +158,73 @@ header {
   background-color: #9f98de;
 }
 
+.course-container {
+  display: flex;
+  flex-direction: column; 
+}
+
+.course-box {
+  display: flex; 
+  align-items: center; 
+  flex-direction: column;  
+  padding: 10px;          
+  justify-content: flex-start; /* align items at the top */
+  border: 1px solid #ccc; 
+  border-radius: 8px; /* round corners */
+  background-color: #f9f9f9; 
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  min-height: 40px;
+  margin-bottom: 10px;
+
+             
+
+}
+
+.box3-container {
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+  width: 100%;
+} 
 
 .course-box2 {
   text-align: center;
   border: 1px solid #ccc; 
-  border-radius: 4px; /* Rounded corners */
-  background-color: #f9f9f9; /* Light background color */
+  border-radius: 4px; 
+  background-color: #f9f9f9; 
   width: 500px; 
   height: 100px;
 }
+
+
+
+.course-info { 
+  margin-left: 5px;
+}
+
+.course-code {
+  font-size: 18px; 
+  font-weight: bold; 
+  text-align: center;
+}
+
+.course-name {
+  font-size: 15px;
+  color: #525252;
+}
+
+.course-description-box {
+  display: flex;               
+  flex-direction: column;     
+  justify-content: flex-start; /* align items at the top */
+}
+
+/* use this to style the button */
+/* .course-description-box button {
+ 
+}
+
+.course-description-box button:hover {
+  background-color: #8B85C1;
+} */
 
