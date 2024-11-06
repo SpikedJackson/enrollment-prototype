@@ -1,8 +1,8 @@
-function Header() {
+const Header = ({ text }) => {
     return(
         <>
             <header>
-                <div><strong>Enrollment</strong></div>
+                <div><strong>{text}</strong></div>
             </header>
         </>
       )
