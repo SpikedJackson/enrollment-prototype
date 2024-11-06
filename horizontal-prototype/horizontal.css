@@ -158,6 +158,18 @@ body {
     height: 100px;
 }
 
+.courses-header {
+    background-color: #9f98de; /* Same color as timetable header */
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Adds a bit of spacing below the header */
+}
+
+
 .to_planner {
   width: 300px;
   height: 0;
@@ -270,7 +282,8 @@ body {
     background-color: #8B85C1;
 }
 
-.enroll{
+
+.to_enroll{
   
     /* float: right; */
     border: 2px solid #D4CDF4;
@@ -284,8 +297,15 @@ body {
     transition-duration: 0.4s;
     cursor: pointer;
   }
+.to_enroll a{
+    
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    
+  }
 
-  .enroll:hover {
+.to_enroll:hover {
     border: 2px solid #8B85C1;
     background-color: #8B85C1;
 }
@@ -296,4 +316,88 @@ header {
   font-size: 40px;
   color: white;
 }
+
+/* Timetable Container */
+.timetable {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 5 days + 1 column for time */
+    grid-auto-rows: 1fr;
+    gap: 2px; /* Spacing between cells */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding: 10px;
+}
+
+/* Time Column (First Column) */
+.time-column {
+    grid-column: 1;
+    background-color: #f0f0f0;
+    color: #333;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Day Columns */
+.day-column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #D4CDF4;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+/* Course Slot Styling */
+.course-slot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Individual Course Colors */
+.compsci-2lc3 {
+    background-color: #6BA4FF; /* Light Blue */
+}
+
+.compsci-2me3 {
+    background-color: #FF6BA4; /* Light Pink */
+}
+
+.compsci-2c03 {
+    background-color: #FFC36B; /* Light Orange */
+}
+
+.astron-2b03 {
+    background-color: #083e1f;; /* Dark Green */
+}
+
+/* Hover Effect */
+.course-slot:hover {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+/* Timetable Header Styling */
+.timetable-header {
+    grid-column: span 6;
+    background-color: #9f98de;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
 
