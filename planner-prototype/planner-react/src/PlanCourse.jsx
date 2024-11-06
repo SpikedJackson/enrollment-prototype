@@ -29,7 +29,7 @@ const PlanCourse = () => {
             <div className="box">
                 <div className="vertical-stack-container">
                     <YearSelect currentYear = {currentYear} setCurrentYear = {setCurrentYear} allYears={allYears} setAllYears={setAllYears} years={years} setYears={setYears}/>
-                    {selectedCourses.length > 0 && <CourseTable courses={selectedCourses} onCourseRemove = {handleCourseRemove} allYears={allYears} currentYear={currentYear}/>}
+                    {selectedCourses.length > 0 && <CourseTable courses={selectedCourses} onCourseRemove = {handleCourseRemove} allYears={allYears} currentYear={currentYear} years={years}/>}
                 </div>
             </div>
         </>
