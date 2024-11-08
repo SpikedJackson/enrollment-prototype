@@ -19,7 +19,7 @@
   flex-direction: column;     
   align-items: center;         
   justify-content: flex-start; /* align items at the top */
-  width: 50%;
+  width: 100%;
   margin-left: auto; 
   margin-right: 0;
 }
@@ -227,4 +227,235 @@ header {
 .course-description-box button:hover {
   background-color: #8B85C1;
 } */
+
+
+.to_planner {
+  width: 300px;
+  height: 0;
+  position: fixed;
+  top: 100px;
+  left: 0px;
+  border-right: 45px solid transparent;
+  border-top: 35px solid #D4CDF4;
+  border-left: 45px solid transparent;
+  transform: rotate(-90deg) translate(-70%, -185px);
+  transform-origin: center;
+  
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.to_planner a{
+  position: absolute;
+  top: -25px;
+  left: 25%;
+  text-decoration: none;
+  color: black;
+}
+
+.to_planner:hover {
+  border-top: 35px solid #8B85C1;
+}
+
+.to_schedule{
+  
+  /* float: right; */
+  border: 2px solid #D4CDF4;
+  border-radius: 4px 4px 4px 4px;
+  background-color: #D4CDF4;
+  
+  position: fixed; /* Fixed positioning */
+  bottom: 15px;    /* 15px from the bottom */
+  right: 15px;
+  padding: 10px 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.to_schedule a{
+  
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  
+}
+
+.to_schedule:hover {
+    border: 2px solid #8B85C1;
+    background-color: #8B85C1;
+}
+
+.to_timetable {
+  width: 300px;
+  height: 0;
+  position: fixed;
+  top: 100px;
+  right: -185px;
+  border-right: 45px solid transparent;
+  border-top: 35px solid #D4CDF4;
+  border-left: 45px solid transparent;
+  transform: rotate(90deg) translate(70%, 0px);
+  transform-origin: center;
+  
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.to_timetable a{
+  position: absolute;
+  top: -25px;
+  left: 30%;
+  text-decoration: none;
+  color: black;
+}
+
+.to_timetable:hover {
+  border-top: 35px solid #8B85C1;
+}
+
+.to_timetable2{
+
+  /* float: right; */
+  border: 2px solid #D4CDF4;
+  border-radius: 4px 4px 4px 4px;
+  background-color: #D4CDF4;
+  
+  position: fixed; /* Fixed positioning */
+  bottom: 15px;    /* 15px from the bottom */
+  left: 15px;
+  padding: 10px 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.to_timetable2 a{
+  
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  
+}
+
+.to_timetable2:hover {
+  border: 2px solid #8B85C1;
+  background-color: #8B85C1;
+}
+
+
+.to_enroll{
+
+  /* float: right; */
+  border: 2px solid #D4CDF4;
+  border-radius: 4px 4px 4px 4px;
+  background-color: #D4CDF4;
+  
+  position: fixed; /* Fixed positioning */
+  bottom: 15px;    /* 15px from the bottom */
+  right: 15px;
+  padding: 10px 15px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.to_enroll a{
+  
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  
+}
+
+.to_enroll:hover {
+  border: 2px solid #8B85C1;
+  background-color: #8B85C1;
+}
+
+
+
+
+.timetable {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 5 days + 1 column for time */
+  grid-auto-rows: 1fr;
+  gap: 2px; /* Spacing between cells */
+  border: 1px solid #ccc;
+  background-color: #fff;
+  padding: 10px;
+}
+
+/* Time Column (First Column) */
+.time-column {
+  grid-column: 1;
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+/* Day Columns */
+.day-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D4CDF4;
+  font-weight: bold;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+/* Course Slot Styling */
+.course-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+
+.light-blue {
+  background-color: #6BA4FF; 
+}
+
+.light-pink {
+  background-color: #FF6BA4; 
+}
+
+.light-orange {
+  background-color: #FFC36B; 
+}
+
+.dark-green {
+  background-color: #083e1f; 
+}
+.red {
+  background-color: #df2020;
+}
+
+/* Hover Effect */
+.course-slot:hover {
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+/* Timetable Header Styling */
+.timetable-header {
+  grid-column: span 6;
+  background-color: #9f98de;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+
 
