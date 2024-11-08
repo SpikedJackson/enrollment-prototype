@@ -420,21 +420,24 @@ header {
   transition: background-color 0.3s;
 }
 
-/* Individual Course Colors */
-.compsci-2lc3 {
-  background-color: #6BA4FF; /* Light Blue */
+
+.light-blue {
+  background-color: #6BA4FF; 
 }
 
-.compsci-2me3 {
-  background-color: #FF6BA4; /* Light Pink */
+.light-pink {
+  background-color: #FF6BA4; 
 }
 
-.compsci-2c03 {
-  background-color: #FFC36B; /* Light Orange */
+.light-orange {
+  background-color: #FFC36B; 
 }
 
-.astron-2b03 {
-  background-color: #083e1f;; /* Dark Green */
+.dark-green {
+  background-color: #083e1f; 
+}
+.red {
+  background-color: #df2020;
 }
 
 /* Hover Effect */
