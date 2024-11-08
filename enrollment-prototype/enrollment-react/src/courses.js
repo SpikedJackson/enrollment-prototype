@@ -6,7 +6,11 @@ const courses  = [
         prerequisites: 'COMPSCI 2LC3, 2C03',
         antirequisites: 'COMPSCI 2FA3, 2MJ3, SFWRENG 2FA3',
         units: '3.0',
-        filter: 'required'
+        filter: 'required',
+        timeSlots: [
+            { day: 'Monday', time: '9:00 - 10:00' },
+            { day: 'Wednesday', time: '1:00 - 2:00' }
+          ]
     },
     {
         name: 'Data Structures and Algorithms',
@@ -15,7 +19,11 @@ const courses  = [
         prerequisites: 'One of the following: COMPSCI 1DM3 or 2DM3, COMPSCI 1XC3 or 1XD3 or 1MD3 or MATH 1MP3, and registration in an Honours Computer Science program or in one of Mathematics and Computer Science, Economics and Computer Science, Arts & Sciences and Computer Science; COMPSCI 1DM3 with a result of at least B, and one of COMPSCI 1XC3 or 1XD3 or 1MD3 or MATH 1MP3 with a result of at least B',
         antirequisites: 'SFWRENG 2C03, COMPENG 3SM4',
         units: '3.0',
-        filter: 'required'
+        filter: 'required',
+        timeSlots: [
+            { day: 'Tuesday', time: '10:00 - 11:00' },
+            { day: 'Thursday', time: '2:00 - 3:00' }
+          ]
     },
     {
         name: 'Databases',
@@ -24,7 +32,11 @@ const courses  = [
         prerequisites: 'COMPSCI 2LC3 or COMPSCI 2DM3',
         antirequisites: ' COMPSCI 3DB3, 4DB3, SFWRENG 3DB3 , 3H03, 4M03, 4DB3',
         units: '3.0',
-        filter: 'required'
+        filter: 'required',
+        timeSlots: [
+            { day: 'Tuesday', time: '9:00 - 11:00' },
+            { day: 'Thursday', time: '3:00 - 4:00' }
+          ]
     },
     {
         name: 'Computer Architecture',
@@ -33,7 +45,11 @@ const courses  = [
         prerequisites: 'One of the following: COMPSCI 1XC3 and 1DM3 and registration in an Honours Computer Science program or in one of Mathematics and Computer Science, Economics and Computer Science, Arts & Sciences and Computer Science; COMPSCI 1XC3 and 1DM3, each with a result of at least B',
         antirequisites: 'COMPENG 3DR4, 4DM4, SFWRENG 2GA3, 3GA3',
         units: '3.0',
-        filter: 'required'
+        filter: 'required',
+        timeSlots: [
+            { day: 'Tuesday', time: '11:00 - 12:00' },
+            { day: 'Friday', time: '2:00 - 3:00' }
+          ]
     },
     {
         name: 'Logical Reasoning for Computer Science',
@@ -42,7 +58,11 @@ const courses  = [
         prerequisites: 'One of the following: COMPSCI 1DM3, 1JC3 one of COMPSCI 1MD3, 1XC3, 1XD3, and registration in an Honours Computer Science program or in one of Mathematics and Computer Science, Economics and Computer Science, Arts & Sciences and Computer Science; COMPSCI 1DM3, 1JC3, and one of COMPSCI 1MD3, 1XC3, 1XD3, each with a result of at least B',
         antirequisites: 'COMPSCI 2DM3, SFWRENG 2DM3',
         units: '3.0',
-        filter: 'required'
+        filter: 'required',
+        timeSlots: [
+            { day: 'Monday', time: '10:00 - 11:00' },
+            { day: 'Wednesday', time: '2:00 - 3:00' }
+          ]
     },
     {
         name: 'Introduction to Software Development',
@@ -51,7 +71,11 @@ const courses  = [
         prerequisites: 'One of the following: COMPSCI 1XC3 or 1XD3, and registration in an Honours Computer Science program or in one of Mathematics and Computer Science, Economics and Computer Science, Arts & Sciences and Computer Science; COMPSCI 1DM3 and one of 1XC3 and 1XD3, each with a result of at least B',
         antirequisites: 'SFWRENG 2AA4, SFWRENG 3K04, MECHTRON 3K04',
         units: '3.0',
-        filter: 'required'
+        filter: 'required',
+        timeSlots: [
+            { day: 'Monday', time: '11:00 - 12:00' },
+            { day: 'Wednesday', time: '3:00 - 4:00' }
+          ]
     },
     {
         name: 'The Big Questions',
@@ -60,7 +84,11 @@ const courses  = [
         prerequisites: 'Registration in Level II or above',
         antirequisites: 'None',
         units: '3.0',
-        filter: 'electives'
+        filter: 'electives',
+        timeSlots: [
+            { day: 'Wednesday', time: '9:00 - 10:00' },
+            { day: 'Friday', time: '1:00 - 2:00' }
+          ]
     },
     
 ];

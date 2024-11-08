@@ -39,7 +39,8 @@ const PlanCourse = () => {
             </div>
             
             <div class="to_schedule">
-                <Link to="/schedule">
+            {/*This is a way to pass the selected courses to the Schedule component, since I can't do it with props */}
+                <Link to="/schedule" state={{selectedCourses}}> 
                     Proceed to Schedule ▶
                 </Link>
             </div>
