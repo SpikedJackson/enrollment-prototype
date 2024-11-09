@@ -1,8 +1,8 @@
 
 import './App.css';
 import Header from './Header';
-import PlanCourse from './PlanCourse';
-import Schedule from './Schedule.jsx';
+import Schedule from './Schedule';
+import CourseSearch from './CourseSearch';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
@@ -12,7 +12,7 @@ function App() {
       <div className="container">
         <Router>
           <Routes>
-            <Route path="/" element={<PlanCourse />} />
+            <Route path="/" element={<CourseSearch />} />
             <Route path="/schedule" element={<Schedule />} />
           </Routes>
         </Router>

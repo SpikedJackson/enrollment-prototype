@@ -2,7 +2,7 @@
   padding: 20px;
   margin: 10px;
   flex: 1;
-  /* Makes all boxes take equal space */
+  /* makes all boxes take equal space */
   display: flex;
 }
 
@@ -55,7 +55,7 @@ ul,
   font-size: 16px;
   border: 2px solid #D4CDF4;
   border-radius: 4px 0 0 4px;
-  /* Rounded left corners */
+  /* rounded left corners */
   outline: none;
 }
 
@@ -65,7 +65,7 @@ ul,
   border: 2px solid #D4CDF4;
   background-color: #D4CDF4;
   border-radius: 4px;
-  /* Rounded corners */
+  /* rounded corners */
   cursor: pointer;
 }
 
@@ -213,22 +213,6 @@ header {
   color: #525252;
 }
 
-.course-description-box {
-  display: flex;               
-  flex-direction: column;     
-  justify-content: flex-start; /* align items at the top */
-}
-
-/* use this to style the button */
-/* .course-description-box button {
- 
-}
-
-.course-description-box button:hover {
-  background-color: #8B85C1;
-} */
-
-
 .to_planner {
   width: 300px;
   height: 0;
@@ -251,6 +235,7 @@ header {
   left: 25%;
   text-decoration: none;
   color: black;
+  margin-right: 5px;
 }
 
 .to_planner:hover {
@@ -455,6 +440,29 @@ header {
   font-size: 18px;
   padding: 10px;
   border-radius: 4px;
+}
+.course-widget {
+  flex: 1 1 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: auto;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+  min-width: 500px;
+}
+.course-widget button {
+  background-color: #D4CDF4;
+  padding: 10px; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  margin-top: 10px;
+}
+.course-widget button:hover {
+  background-color: #8B85C1;
 }
 
 
