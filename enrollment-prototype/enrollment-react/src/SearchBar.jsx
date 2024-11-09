@@ -1,12 +1,8 @@
-
 import React, { useState } from 'react';
-import courses from './courses.js'
 
-const SearchBar = ({ onCourseSelect }) => {
+const SearchBar = ({ courses, onCourseSelect }) => {
     const [inputValue, setInputValue] = useState('');
     const [suggestions, setSuggestions] = useState([]);
-
-
 
     const handleChange = (event) => {
         const value = event.target.value;
@@ -14,7 +10,7 @@ const SearchBar = ({ onCourseSelect }) => {
 
         if (value) {
             const filteredSuggestions = courses.filter(course =>
-                course.name.toLowerCase().includes(value.toLowerCase()) || //make sure comparison between input and stored data is case sensitive
+                course.name.toLowerCase().includes(value.toLowerCase()) || 
                 course.code.toLowerCase().includes(value.toLowerCase())
             );
             setSuggestions(filteredSuggestions);
@@ -24,10 +20,9 @@ const SearchBar = ({ onCourseSelect }) => {
     };
 
     const handleSuggestionClick = (course) => {
-        setInputValue(course);
+        setInputValue(course.code);
         setSuggestions([]); 
         onCourseSelect(course);
-        
     };
 
     return (
@@ -35,7 +30,7 @@ const SearchBar = ({ onCourseSelect }) => {
             <div style={{ display: 'flex', alignItems: 'center' }}>
                 <input
                     type="text"
-                    value={inputValue.code}
+                    value={inputValue}
                     onChange={handleChange}
                     placeholder="Search for a course..."
                     className="search-input"
@@ -68,6 +63,7 @@ const SearchBar = ({ onCourseSelect }) => {
                             onMouseLeave={(e) => e.target.style.backgroundColor = 'white'}
                         >
                             {course.code} - {course.name}
+
                         </li>
                     ))}
                 </ul>
