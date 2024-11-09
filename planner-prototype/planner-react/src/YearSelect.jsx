@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const YearSelect = ({currentYear, setCurrentYear, allYears, setAllYears, years, setYears}) => {
+const YearSelect = ({ currentYear, setCurrentYear, allYears, setAllYears, years, setYears }) => {
 
     const handlePlusClick = () => {
         if (years.length < 6) {
@@ -16,13 +16,12 @@ const YearSelect = ({currentYear, setCurrentYear, allYears, setAllYears, years, 
     }
 
     return (
-        <div className="YearSelect">
-            <button onClick={() => setAllYears(true)}>All Years</button>
+        <div className="tab">
+            <button className={(allYears) ? "link active" : "link"} onClick={() => setAllYears(true)}>All Years</button>
             {years.map((year) => (
-                <button onClick={() => handleYearClick(year)}>{year}</button>
+                <button className={(currentYear === year && !allYears) ? "link active" : "link"} onClick={() => handleYearClick(year)}>{year}</button>
             ))}
-            <button onClick={() => handlePlusClick()}>+</button>
-            <br />{allYears ? "All Years" : currentYear}
+            <button className="link" onClick={() => handlePlusClick()}>+</button>
         </div>
     );
 };
