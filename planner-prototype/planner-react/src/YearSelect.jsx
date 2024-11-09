@@ -7,6 +7,7 @@ const YearSelect = ({ currentYear, setCurrentYear, allYears, setAllYears, years,
             var newYears = years.slice();
             newYears.push(newYears.length + 1);
             setYears(newYears);
+            handleYearClick(newYears.length)
         }
     }
 
