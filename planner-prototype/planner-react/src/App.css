@@ -15,10 +15,11 @@
 }
 
 .vertical-stack-container {
-  display: flex;               
-  flex-direction: column;     
-  align-items: center;         
-  justify-content: flex-start; /* align items at the top */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* align items at the top */
   width: 100%;
 }
 
@@ -73,11 +74,15 @@ ul,
 }
 
 .search-dropdown {
-  position: absolute; /* Position relative to parent */
+  position: absolute;
+  /* Position relative to parent */
   /*z-index: 1000;  Ensure it's on top */
-  background-color: white; /* Background for dropdown */
-  border: 1px solid #ccc; /* Border for dropdown */
-  width: 100%; /* Match input width */
+  background-color: white;
+  /* Background for dropdown */
+  border: 1px solid #ccc;
+  /* Border for dropdown */
+  width: 100%;
+  /* Match input width */
   padding: 0;
   margin: 0;
 }
@@ -104,43 +109,128 @@ header {
 }
 
 .planner-table-table {
-  width: 100%;                
-  border-collapse: collapse;  
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .planner-table th,
 .planner-table td {
-  width: 150px;              
-  border: 1px solid #ccc;   
-  padding: 10px;             
-  text-align: center;           
+  width: 150px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
 }
 
 .course-container {
-  display: flex;
-  flex-direction: column; /* Stacks items vertically */
+  display: inline;
+  flex-direction: column;
+  /* Stacks items vertically */
   width: 75%;
 }
 
 .course-box {
-  display: flex; 
-  align-items: center; 
-  justify-content: center; 
-  padding: 10px; 
-  border: 1px solid #ccc; 
-  border-radius: 8px; /* round corners */
-  background-color: #f9f9f9; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /* round corners */
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   min-height: 40px;
   margin-bottom: 10px;
 }
 
 table {
-	display: table;
+  display: table;
 }
+
 table tr {
-	display: table-cell;
+  display: table-cell;
 }
+
 table tr td {
-	display: block;
+  display: block;
+}
+
+.tab {
+  overflow: hidden;
+  background-color: #D4CDF4;
+  width: 500px;
+  height: max-content;
+  border-radius: 4px;
+}
+
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.4s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #8B85C1;
+}
+
+.tab button.active {
+  background-color: #9f98de;
+}
+
+.tab-content {
+  align-items: center;
+}
+
+/*planner*/
+.planner {
+  display: grid;
+  grid-template-columns: repeat(auto, 1fr);
+  grid-template-rows: 50px auto;
+  background-color: transparent;
+  padding: 10px;
+  align-content: space-evenly;
+}
+
+.year-row {
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D4CDF4;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.course-row {
+  grid-row: 2;
+}
+
+.course-slot-planner {
+  display: flex;
+  flex-direction: column;
+  /* Stacks items vertically */
+  margin-left: left;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: black;
+  background-color: transparent;
+  font-size: 14px;
+
+}
+
+.planned {
+  background-color: #3a8ce0;
+}
+
+.enrolled {
+  background-color: #e7f473;
+}
+
+.completed {
+  background-color: #38e150;
 }
