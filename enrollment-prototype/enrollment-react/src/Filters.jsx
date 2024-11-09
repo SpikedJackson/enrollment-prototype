@@ -1,13 +1,25 @@
 import React, { useState } from 'react';
 
-const Filters = ({ setSelectedFilter }) => {
+const Filters = ({ selectedFilter, setSelectedFilter }) => {
 
     return (
         <div className="box3-container">
             <div className="tab">
-                <button className="link" onClick={() => setSelectedFilter('all')}>All</button>
-                <button className="link" onClick={() => setSelectedFilter('required')}>Required</button>
-                <button className="link" onClick={() => setSelectedFilter('electives')}>Electives</button>
+                <button 
+                    onClick={() => setSelectedFilter('all') }
+                    className={selectedFilter === 'all' ? 'active' : ''}>
+                    All
+                </button>
+                <button 
+                    onClick={() => setSelectedFilter('required')}
+                    className={selectedFilter === 'required' ? 'active' : ''}>
+                    Required
+                </button>
+                <button 
+                    onClick={() => setSelectedFilter('electives')}
+                    className={selectedFilter === 'electives' ? 'active' : ''}>
+                    Electives
+                </button>
             </div>
         </div>
     );

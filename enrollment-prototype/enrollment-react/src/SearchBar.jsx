@@ -4,6 +4,8 @@ const SearchBar = ({ courses, onCourseSelect }) => {
     const [inputValue, setInputValue] = useState('');
     const [suggestions, setSuggestions] = useState([]);
 
+
+
     const handleChange = (event) => {
         const value = event.target.value;
         setInputValue(value);
@@ -27,18 +29,18 @@ const SearchBar = ({ courses, onCourseSelect }) => {
 
     return (
         <div style={{ position: 'relative'}}>
-            <div style={{ display: 'flex', alignItems: 'center' }}>
-                <input
-                    type="text"
-                    value={inputValue}
-                    onChange={handleChange}
-                    placeholder="Search for a course..."
-                    className="search-input"
-                />
+            <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                 <div className="select-container">
-                    <button className="select-button">
-                        <img src={require('./images/search.png')} alt="Search" className="button-image" />
-                    </button>
+                    <input
+                        type="text"
+                        value={inputValue}
+                        onChange={handleChange}
+                        placeholder="Search for a course..."
+                        className="search-input" 
+                    />
+                    <img src={require('./images/search.png')} alt="Search" 
+                    className="button-image" 
+                    />
                 </div>
                 <div className="select-container">
                     <button className="select-button">

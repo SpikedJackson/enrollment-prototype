@@ -32,10 +32,15 @@ const CourseSearch = () => {
 
     return (
         <>
-            <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%' }}>
+            <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%', 
+                // border: '1px solid black'  
+                }}>
                 <div style={{ flex: '0 1 300px', paddingRight: '20px' }}>
-                    <SearchBar courses={filteredCourses} onCourseSelect={onCourseSelect} />
                     <Filters selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} courses={filteredCourses} />
+                    <SearchBar 
+                    courses={filteredCourses} 
+                    onCourseSelect={onCourseSelect} />
+                    
                 </div>
 
                 {selectedCourse && (
