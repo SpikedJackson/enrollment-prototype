@@ -122,7 +122,7 @@ header {
 }
 
 .course-container {
-  display: flex;
+  display: inline;
   flex-direction: column;
   /* Stacks items vertically */
   width: 75%;
@@ -179,4 +179,58 @@ table tr td {
 
 .tab button.active {
   background-color: #9f98de;
+}
+
+.tab-content {
+  align-items: center;
+}
+
+/*planner*/
+.planner {
+  display: grid;
+  grid-template-columns: repeat(auto, 1fr);
+  grid-template-rows: 50px auto;
+  background-color: transparent;
+  padding: 10px;
+  align-content: space-evenly;
+}
+
+.year-row {
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #D4CDF4;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.course-row {
+  grid-row: 2;
+}
+
+.course-slot-planner {
+  display: flex;
+  flex-direction: column;
+  /* Stacks items vertically */
+  margin-left: left;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: black;
+  background-color: transparent;
+  font-size: 14px;
+
+}
+
+.planned {
+  background-color: #3a8ce0;
+}
+
+.enrolled {
+  background-color: #e7f473;
+}
+
+.completed {
+  background-color: #38e150;
 }
