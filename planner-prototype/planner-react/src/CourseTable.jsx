@@ -47,14 +47,14 @@ const CourseTable = ({ courses, onCourseRemove, allYears, currentYear, years }) 
                                 ))}
                                 <div class="year-row">Enrolled</div>
                                 {courses.map((course) => (
-                                    (course.year === currentYear /**&& course.enrolled === true */) &&
+                                    (course.year === currentYear && false /**&& course.enrolled === true */) &&
                                     <div class="course-slot-planner enrolled">
                                         {displayCourse(course)}
                                     </div>
                                 ))}
                                 <div class="year-row">Completed</div>
                                 {courses.map((course) => (
-                                    (course.year === currentYear /**&& course.completed === true */) &&
+                                    (course.year === currentYear && false /**&& course.completed === true */) &&
                                     <div class="course-slot-planner completed">
                                         {displayCourse(course)}
                                     </div>
