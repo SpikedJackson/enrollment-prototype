@@ -449,3 +449,35 @@ header {
 .completed {
     background-color: #38e150;
 }
+.hover-box-button {
+    padding: 10px 20px;
+    background-color: #4543431e;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  /* Simple hover box styling */
+  .hover-box {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 100%; /* Position below the button */
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 8px;
+    padding: 8px;
+    background-color: #8B85C1;
+    color: white;
+    border-radius: 5px;
+    font-size: 0.9em;
+    white-space: nowrap;
+  }
+
+  /* Show the hover box on hover */
+  .hover-box-button:hover .hover-box {
+    display: block;
+  }
+
+  
