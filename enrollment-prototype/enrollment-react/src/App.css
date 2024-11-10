@@ -95,6 +95,14 @@ input {
   padding: 10px;
 }
 
+.help-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 42px;
+  margin-left: auto;
+}
+
 table,
 th,
 td {
@@ -200,24 +208,58 @@ header {
 .course-container {
   display: flex;
   flex-direction: column; 
+  margin-left: auto;
 }
+
+
+
 
 .course-box {
   display: flex; 
   align-items: center; 
-  flex-direction: column;  
-  padding: 10px;          
-  justify-content: flex-start; /* align items at the top */
-  border: 1px solid #ccc; 
-  border-radius: 8px; /* round corners */
-  background-color: #f9f9f9; 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
-  min-height: 40px;
-  margin-bottom: 10px;
+  /* flex-direction: column;   */
+  padding: 5px;  
+  /* justify-content: flex-start;  */
+  border: 1px solid #ccc;
+  border-radius: 12px; /* Round corners more */
+  background: #f9f9f9;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);  /* More pronounced shadow for depth */
+  min-height: 75px;  /* Increased height for a more substantial feel */
+  margin-bottom: 20px;  /* More space between course boxes */
+  color: white;
+  width: 300px;
 
-             
 
+  /* Adding a hover effect to make the box interactive */
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
+.course-box:hover {
+  transform: translateY(-5px);  /* Slight lift effect on hover */
+  /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);  Stronger shadow on hover */
+}
+
+/* .course-box .course-info {
+  color: #fff;  
+} */
+
+/* .course-box .course-name {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 0px 0;
+  text-align: center;
+  color: black;
+}
+
+.course-box .course-code {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;  
+} */
+
+
+
+
 
 .box3-container {
   display: flex;
