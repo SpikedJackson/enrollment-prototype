@@ -37,7 +37,7 @@ const CourseTable = ({ courses, onCourseRemove, allYears, currentYear, years }) 
                         </div>
                     </> : <>
                         <div class="tab-content">
-                            <div class="planner">
+                            <div class="planner_single_year">
                                 <div class="year-row">Planned</div>
                                 <div class="course-row">
                                     {courses.map((course) => (

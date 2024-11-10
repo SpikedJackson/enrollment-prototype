@@ -11,6 +11,15 @@ const YearSelect = ({ currentYear, setCurrentYear, allYears, setAllYears, years,
         }
     }
 
+    const handleMinusClick = () => {
+        if (years.length > 1) {
+            var newYears = years.slice();
+            newYears.pop();
+            setYears(newYears);
+            handleYearClick(newYears.length)
+        }
+    }
+
     const handleYearClick = (year) => {
         setAllYears(false);
         setCurrentYear(year);
@@ -23,6 +32,7 @@ const YearSelect = ({ currentYear, setCurrentYear, allYears, setAllYears, years,
                 <button className={(currentYear === year && !allYears) ? "link active" : "link"} onClick={() => handleYearClick(year)}>{year}</button>
             ))}
             <button className="link" onClick={() => handlePlusClick()}>+</button>
+            <button className="link" onClick={() => handleMinusClick()}>-</button>
         </div>
     );
 };
