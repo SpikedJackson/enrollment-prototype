@@ -60,8 +60,16 @@ const CourseSearch = () => {
 
             <div className="box">
                 <div className="vertical-stack-container">
+                    <div class="help-container">
+                        <button class="select-button">
+                        <img src={require('./images/help.png')} alt="Search" 
+                        className="button-image" 
+                        />
+                        </button>
+                    </div>
                     {selectedCourses.length > 0 && <CourseTable courses={selectedCourses} onCourseRemove={handleCourseRemove} />}
                 </div>
+                
             </div>
             
             <div className="to_planner">
