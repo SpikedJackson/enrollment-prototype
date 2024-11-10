@@ -4,7 +4,7 @@ const CourseTable = ({ courses, onCourseRemove, allYears, currentYear, years }) 
     const displayCourse = (course) => {
         return (
             <div className="display-course">
-                {course.code} - {course.name}
+                {course.code}
                 <button onClick={() => onCourseRemove(course)} style={{ marginLeft: '10px' }}>
                     <img src={require('./images/delete.png')} className="button-image" />
                 </button>
@@ -39,26 +39,32 @@ const CourseTable = ({ courses, onCourseRemove, allYears, currentYear, years }) 
                         <div class="tab-content">
                             <div class="planner">
                                 <div class="year-row">Planned</div>
-                                {courses.map((course) => (
-                                    (course.year === currentYear /**&& course.planned === true */) &&
-                                    <div class="course-slot-planner planned">
-                                        {displayCourse(course)}
-                                    </div>
-                                ))}
+                                <div class="course-row">
+                                    {courses.map((course) => (
+                                        (course.year === currentYear /**&& course.planned === true */) &&
+                                        <div class="course-slot-planner planned">
+                                            {displayCourse(course)}
+                                        </div>
+                                    ))}
+                                </div>
                                 <div class="year-row">Enrolled</div>
-                                {courses.map((course) => (
-                                    (course.year === currentYear && false /**&& course.enrolled === true */) &&
-                                    <div class="course-slot-planner enrolled">
-                                        {displayCourse(course)}
-                                    </div>
-                                ))}
+                                <div class="course-row">
+                                    {courses.map((course) => (
+                                        (course.year === currentYear && false /**&& course.enrolled === true */) &&
+                                        <div class="course-slot-planner enrolled">
+                                            {displayCourse(course)}
+                                        </div>
+                                    ))}
+                                </div>
                                 <div class="year-row">Completed</div>
-                                {courses.map((course) => (
-                                    (course.year === currentYear && false /**&& course.completed === true */) &&
-                                    <div class="course-slot-planner completed">
-                                        {displayCourse(course)}
-                                    </div>
-                                ))}
+                                <div class="course-row">
+                                    {courses.map((course) => (
+                                        (course.year === currentYear && false /**&& course.completed === true */) &&
+                                        <div class="course-slot-planner completed">
+                                            {displayCourse(course)}
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </>}
