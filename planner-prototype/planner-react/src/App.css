@@ -188,7 +188,16 @@ table tr td {
 /*planner*/
 .planner {
   display: grid;
-  grid-template-columns: repeat(auto, 1fr);
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50px auto;
+  background-color: transparent;
+  padding: 10px;
+  align-content: space-evenly;
+}
+
+.planner_single_year {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 50px auto;
   background-color: transparent;
   padding: 10px;
@@ -220,7 +229,7 @@ table tr td {
   color: black;
   background-color: transparent;
   font-size: 14px;
-
+  height: 50px;
 }
 
 .planned {
