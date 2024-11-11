@@ -6,7 +6,7 @@ const CourseTable = ({ courses, onCourseRemove, allYears, currentYear, years }) 
             <div className="display-course">
                 {course.code}
                 <button onClick={() => onCourseRemove(course)} style={{ marginLeft: '10px' }}>
-                    <img src={require('./images/delete.png')} className="button-image" />
+                    <img src={require('./images/delete.png')} className="button-image" style={{padding:'0px'}} />
                 </button>
             </div>
         )

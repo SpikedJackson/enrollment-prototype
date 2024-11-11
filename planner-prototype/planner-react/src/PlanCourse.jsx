@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import SearchBar from './SearchBar'; 
+import CourseSearch from './CourseSearch';
 import YearSelect from './YearSelect'; 
 import CourseTable from './CourseTable'; 
 
@@ -24,7 +24,7 @@ const PlanCourse = () => {
     return (
         <>
             <div className="box">
-                <SearchBar onCourseSelect={handleCourseSelect} years = {years}/>
+                <CourseSearch blah={handleCourseSelect}/>
             </div>
             <div className="box">
                 <div className="vertical-stack-container">

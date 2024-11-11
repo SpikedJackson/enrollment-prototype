@@ -1,20 +1,18 @@
 
 import './App.css';
 import Header from './Header';
-import SearchBar from './SearchBar';
 import Requirements from './Requirements';
-import Planner from './Planner';
-import PlanCourse from './PlanCourse';
+import CourseSearch from './CourseSearch';
 
 function App() {
   return (
     <div className="App">
       <Header />
       <div className="container">
-        <div className="box">
+        <div className="box" style={{flex:'0.5'}}>
           <Requirements />
         </div>
-        <PlanCourse />
+        <CourseSearch />
       </div>
 
     </div>
