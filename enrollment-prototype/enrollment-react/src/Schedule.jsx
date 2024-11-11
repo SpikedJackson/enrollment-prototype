@@ -34,6 +34,8 @@ function Schedule() {
     return (
         <>
             <div className="container">
+              <div className="vertical-stack-container">
+                <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
                 <div className="box">
                     <div className="box1-container">
                       <div className="course-container">
@@ -77,6 +79,7 @@ function Schedule() {
                         ))
                       )}
                     </div>
+                    
                   </div>
                 </div>
 
@@ -95,14 +98,14 @@ function Schedule() {
                         {courses.length === 0 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[0]}}>★ {courses[0].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[0]}}>{courses[0].code}</div>
                         )}
                         <div className="course-slot"></div>
                         <div className="course-slot"></div>
                         {courses.length <= 1 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[1]}}>★ {courses[1].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[1]}}>{courses[1].code}</div>
                         )}
                         <div className="course-slot"></div>
 
@@ -125,7 +128,7 @@ function Schedule() {
                         {courses.length <= 1 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[1]}}>★ {courses[1].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[1]}}>{courses[1].code}</div>
                         )}
                         <div className="course-slot"></div>
                         {courses.length <= 4 ? (
@@ -136,7 +139,7 @@ function Schedule() {
                         {courses.length === 0 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[0]}}>★ {courses[0].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[0]}}>{courses[0].code}</div>
                         )}
                         <div className="course-slot"></div>
 
@@ -159,13 +162,13 @@ function Schedule() {
                         {courses.length === 0 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[0]}}>★ {courses[0].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[0]}}>{courses[0].code}</div>
                         )}
                         <div className="course-slot"></div>
                         {courses.length <= 1 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[1]}}>★ {courses[1].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[1]}}>{courses[1].code}</div>
                         )}
                         <div className="course-slot"></div>
                         <div className="course-slot"></div>
@@ -207,23 +210,28 @@ function Schedule() {
                             <div className="course-slot" style = {{backgroundColor: colors[4]}}>{courses[4].code}</div>
                         )}
                     </div>
-                    {/* <div className="select-container"> */}
                       <button className="no_func">
                           <img src={require('./images/shuffle.png')} alt="Shuffle" className="button-image" style = {{width: '25px', height: '25px'}} />
                       </button>
-                    {/* </div> */}
+                    
                   </div>
                 </div>
-
+                </div>
+                <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
+                  <div className="to_timetable2">
+                    <Link to="/">
+                      ◀ Return to Timetable
+                    </Link>
+                  </div>
+                  <div className="to_enroll">
+                    Enroll ▶
+                  </div>
+                </div>
+                
+              </div>
             </div>
-            <div className="to_timetable2">
-                <Link to="/">
-                    ◀ Return to Timetable
-                </Link>
-            </div>
-            <div className="to_enroll">
-                Enroll ▶
-            </div>
+            
+            
         </>
     );
 }
