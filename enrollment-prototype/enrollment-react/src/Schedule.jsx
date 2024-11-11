@@ -5,6 +5,8 @@ import colors from './colors';
 function Schedule() {
     const location = useLocation();
     const { selectedCourses } = location.state || { selectedCourses: [] }; //make it an empty array if no data passed
+    const [selectedCourse, setSelectedCourse] = useState(null); //for viewing extra info on a selected course
+    const [expandedCourse, setExpandedCourse] = useState(null);
     
     //set selected courses to passed in courses
     const [courses, setCourses] = useState(selectedCourses);
@@ -14,41 +16,72 @@ function Schedule() {
         //filter out the course to remove
         const updatedCourses = courses.filter(course => course.code !== courseToRemove.code);
         setCourses(updatedCourses); 
+        //reset selected course if the removed course was selected
+        if (selectedCourse && selectedCourse.code === courseToRemove.code) {
+          setSelectedCourse(null); // Clear selected course if removed
+      }
     };
+
+    const handleCourseClick = (course) => {
+      if (expandedCourse === course.code) {
+          setExpandedCourse(null); 
+      } else {
+          setExpandedCourse(course.code); 
+      }
+      setSelectedCourse(course); 
+  };
 
     return (
         <>
             <div className="container">
                 <div className="box">
                     <div className="box1-container">
-                        <div className="course-container1">
-                            {courses.length === 0 ? (
-                                <p>No courses selected yet.</p>
-                            ) : (
-                                courses.map((course, index) => (
-                                    <div key={index} className="course-box" style={{ background: `linear-gradient(to bottom, ${colors[index % colors.length]} 50%, #FFFFFF)` }}>
-                                        <div className="course-info">
-                                            <p className="course-code">{course.code}</p>
+                      <div className="course-container">
+                              {courses.length === 0 ? (
+                                  <p>No courses selected yet.</p>
+                              ) : (
+                                  courses.map((course, index) => (
+                                      <div key={index} className={`course-box-schedule ${expandedCourse === course.code ? 'expanded' : ''}`}
+                                      onClick = {() => handleCourseClick(course)}>
+                                        {/* <div className="course-box-header" style={{ background: `linear-gradient(to bottom, ${colors[index % colors.length]} 50%, #FFFFFF)`, cursor: 'pointer' }}> */}
+                                        <div className="course-box-header" style={{ background: `${colors[index % colors.length]}`, cursor: 'pointer' }}>
+                                          <div className="course-info">
+                                              <p className="course-code">{course.code}</p>
+                                          </div>
+                                          <button 
+                                              onClick={(e) => {e.stopPropagation(); handleRemoveCourse(course);}} //prevent course box click when delete is pressed
+                                              style={{ marginLeft: 'auto', background: 'none', border: 'none', cursor: 'pointer' }}
+                                          >
+                                              <img 
+                                                  src={require('./images/delete.png')} 
+                                                  className="button-image"
+                                                  alt="Delete"
+                                                  style={{ width: '20px', height: '20px' }} 
+                                              />
+                                          </button>
                                         </div>
-                                        <button 
-                                            onClick={() => handleRemoveCourse(course)} 
-                                            style={{ marginLeft: 'auto', background: 'none', border: 'none', cursor: 'pointer' }}
-                                        >
-                                            <img 
-                                                src={require('./images/delete.png')} 
-                                                className="button-image"
-                                                alt="Delete"
-                                                style={{ width: '20px', height: '20px' }} 
-                                            />
-                                        </button>
-                                    </div>
-                                ))
+                                        {expandedCourse === course.code && (
+                              <div className="course-widget1">
+                                  <h3>{selectedCourse.name}</h3>
+                                  <p><strong>Code:</strong> {selectedCourse.code}</p>
+                                  <p><strong>Professor:</strong> {selectedCourse.prof}</p>
+                                  <p><strong>Seats:</strong> {selectedCourse.seats}</p>
+                                  <p><strong>Description:</strong> {selectedCourse.description}</p>
+                                  <p><strong>Prerequisites:</strong> {selectedCourse.prerequisites}</p>
+                                  <p><strong>Antirequisites:</strong> {selectedCourse.antirequisites}</p>
+                                  <p><strong>Units:</strong> {selectedCourse.units}</p>
+
+                              </div>
                             )}
-                        </div>
+                          </div>
+                        ))
+                      )}
                     </div>
+                  </div>
                 </div>
 
                 <div className="box">
+                  <div className="vertical-stack-container">
                     <div className="timetable">
                         <div className="timetable-header">Weekly Course Schedule</div>
                         <div className="time-column">Time</div>
@@ -174,7 +207,14 @@ function Schedule() {
                             <div className="course-slot" style = {{backgroundColor: colors[4]}}>{courses[4].code}</div>
                         )}
                     </div>
+                    {/* <div className="select-container"> */}
+                      <button className="no_func">
+                          <img src={require('./images/shuffle.png')} alt="Shuffle" className="button-image" style = {{width: '25px', height: '25px'}} />
+                      </button>
+                    {/* </div> */}
+                  </div>
                 </div>
+
             </div>
             <div className="to_timetable2">
                 <Link to="/">

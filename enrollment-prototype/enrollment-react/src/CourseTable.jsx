@@ -9,7 +9,7 @@ const CourseTable = ({ courses, onCourseRemove }) => {
                 <ul>
                     {courses.map((course, index) => (
                     <li key={course.code} style={{ marginBottom: '10px' }}>
-                        <div className="course-box" style={{ background: `linear-gradient(to bottom, ${colors[index % colors.length]} 50%, #FFFFFF)` }}>
+                        <div className="course-box-enrolment" style={{ background: `${colors[index % colors.length]}` }}>
                             
                             <div className="course-info">
                                 <p className="course-code">{course.code}</p>

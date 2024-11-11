@@ -7,6 +7,8 @@ const courses  = [
         antirequisites: 'COMPSCI 2FA3, 2MJ3, SFWRENG 2FA3',
         units: '3.0',
         filter: 'required',
+        prof: 'Ryszard Janicki',
+        seats: 'Open',
         timeSlots: [
             { day: 'Monday', time: '9:00 - 10:00' },
             { day: 'Wednesday', time: '1:00 - 2:00' }
@@ -20,6 +22,8 @@ const courses  = [
         antirequisites: 'SFWRENG 2C03, COMPENG 3SM4',
         units: '3.0',
         filter: 'required',
+        prof: 'Nick Moore',
+        seats: 'Open',
         timeSlots: [
             { day: 'Tuesday', time: '10:00 - 11:00' },
             { day: 'Thursday', time: '2:00 - 3:00' }
@@ -33,6 +37,8 @@ const courses  = [
         antirequisites: ' COMPSCI 3DB3, 4DB3, SFWRENG 3DB3 , 3H03, 4M03, 4DB3',
         units: '3.0',
         filter: 'required',
+        prof: 'Jelle Hellings',
+        seats: 'Closed',
         timeSlots: [
             { day: 'Tuesday', time: '9:00 - 11:00' },
             { day: 'Thursday', time: '3:00 - 4:00' }
@@ -46,6 +52,8 @@ const courses  = [
         antirequisites: 'COMPENG 3DR4, 4DM4, SFWRENG 2GA3, 3GA3',
         units: '3.0',
         filter: 'required',
+        prof: 'Hans Boden',
+        seats: 'Closed',
         timeSlots: [
             { day: 'Tuesday', time: '11:00 - 12:00' },
             { day: 'Friday', time: '2:00 - 3:00' }
@@ -59,6 +67,8 @@ const courses  = [
         antirequisites: 'COMPSCI 2DM3, SFWRENG 2DM3',
         units: '3.0',
         filter: 'required',
+        prof: 'Ryszard Janicki',
+        seats: 'Open',
         timeSlots: [
             { day: 'Monday', time: '10:00 - 11:00' },
             { day: 'Wednesday', time: '2:00 - 3:00' }
@@ -72,6 +82,8 @@ const courses  = [
         antirequisites: 'SFWRENG 2AA4, SFWRENG 3K04, MECHTRON 3K04',
         units: '3.0',
         filter: 'required',
+        prof: 'Vincent Maccio',
+        seats: 'Closed',
         timeSlots: [
             { day: 'Monday', time: '11:00 - 12:00' },
             { day: 'Wednesday', time: '3:00 - 4:00' }
@@ -85,6 +97,8 @@ const courses  = [
         antirequisites: 'None',
         units: '3.0',
         filter: 'electives',
+        prof: 'Denise Geiskkovitch',
+        seats: 'Closed',
         timeSlots: [
             { day: 'Wednesday', time: '9:00 - 10:00' },
             { day: 'Friday', time: '1:00 - 2:00' }
