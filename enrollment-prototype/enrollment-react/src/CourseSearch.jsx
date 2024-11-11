@@ -32,6 +32,11 @@ const CourseSearch = () => {
 
     return (
         <>
+        <div className="to_planner">
+            <a href="./horizontal-planner.html">Academic Planner ▼</a>
+        </div>
+        <div className="vertical-stack-container">
+        <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
             <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%', 
                 // border: '1px solid black'  
                 }}>
@@ -58,7 +63,7 @@ const CourseSearch = () => {
                 )}
             </div>
 
-            <div className="box">
+            <div className="box" style = {{width: "50%"}}>
                 <div className="vertical-stack-container">
                     <div class="help-container">
                         <button class="select-button">
@@ -72,15 +77,20 @@ const CourseSearch = () => {
                 
             </div>
             
-            <div className="to_planner">
-                <a href="./horizontal-planner.html">Academic Planner ▼</a>
-            </div>
             
-            <div className="to_schedule">
-                {/* Pass selectedCourses to the Schedule component */}
-                <Link to="/schedule" state={{ selectedCourses }}> 
-                    Proceed to Schedule ▶
-                </Link>
+            
+                
+            </div>
+            <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
+                
+            
+                <div className="to_schedule">
+                    {/* Pass selectedCourses to the Schedule component */}
+                    <Link to="/schedule" state={{ selectedCourses }}> 
+                        Proceed to Schedule ▶
+                    </Link>
+                </div>
+            </div>
             </div>
         </>
     );

@@ -11,7 +11,10 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  min-width: 1100px;
+  /* min-width: 1100px; */
+}
+.App {
+  /* min-width: 1200px; */
 }
 
 .vertical-stack-container {
@@ -86,7 +89,7 @@ input {
 }
 
 .search-dropdown {
-  position: absolute; /* Position relative to parent */
+  position: absolute; 
   /*z-index: 1000;  Ensure it's on top */
   background-color: white; /* Background for dropdown */
   border: 1px solid #ccc; /* Border for dropdown */
@@ -141,7 +144,7 @@ header {
   text-align: center;
   font-size: 40px;
   color: white;
-  min-width: 1100px;
+  /* min-width: 1200px; */
 }
 
 .planner-table-table {
@@ -327,8 +330,8 @@ header {
 
 .to_planner {
   width: 300px;
-  height: 0;
-  position: fixed;
+  height: 0px;
+  position: absolute;
   top: 100px;
   left: 0px;
   border-right: 45px solid transparent;
@@ -355,15 +358,13 @@ header {
 }
 
 .to_schedule{
-  
-  /* float: right; */
+
   border: 2px solid #D4CDF4;
   border-radius: 4px 4px 4px 4px;
   background-color: #D4CDF4;
-  
-  position: fixed; /* Fixed positioning */
-  bottom: 15px;    /* 15px from the bottom */
-  right: 15px;
+  margin-left: auto;
+  margin-right: 20px;
+
   padding: 10px 15px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -417,12 +418,14 @@ header {
   border-radius: 4px 4px 4px 4px;
   background-color: #D4CDF4;
   
-  position: fixed; /* Fixed positioning */
+  /* position: fixed;  */
   bottom: 15px;    /* 15px from the bottom */
   left: 15px;
-  padding: 10px 15px;
+  padding: 10px;
   transition-duration: 0.4s;
   cursor: pointer;
+  width: 200px;
+  text-align: center;
 }
 
 .to_timetable2 a{
@@ -441,14 +444,12 @@ header {
 
 .to_enroll{
 
-  /* float: right; */
+  
   border: 2px solid #D4CDF4;
   border-radius: 4px 4px 4px 4px;
   background-color: #D4CDF4;
-  
-  position: fixed; /* Fixed positioning */
-  bottom: 15px;    /* 15px from the bottom */
-  right: 15px;
+  margin-left: auto;
+  margin-right: 20px;
   padding: 10px 15px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -563,7 +564,7 @@ header {
   background-color: #f9f9f9;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-left: 20px;
-  min-width: 500px;
+  min-width: 500px; 
 }
 .course-widget button {
   background-color: #D4CDF4;

@@ -8,7 +8,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <Header text = "Enrollment"/>
+      <Header text = "Enrolment"/>
       <div className="container">
         <Router>
           <Routes>
