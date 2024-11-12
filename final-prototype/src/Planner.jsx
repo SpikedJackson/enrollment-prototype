@@ -17,11 +17,7 @@ function Planner() {
                         </div>
                         <CourseSearchPlanner />
                     </div>
-                    <div className="to_timetable2" style = {{right: '15px'}}>
-                        <Link to="/">
-                            Proceed to Timetable ▶
-                        </Link>
-                    </div>
+                    
                 </div>
             </div>
         </>
