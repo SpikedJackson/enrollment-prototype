@@ -16,9 +16,9 @@ const Filters = ({ selectedFilter, setSelectedFilter }) => {
                     Required
                 </button>
                 <button 
-                    onClick={() => setSelectedFilter('electives')}
-                    className={selectedFilter === 'electives' ? 'active' : ''}>
-                    Electives
+                    onClick={() => setSelectedFilter('planned')}
+                    className={selectedFilter === 'planned' ? 'active' : ''}>
+                    Planned
                 </button>
             </div>
         </div>
