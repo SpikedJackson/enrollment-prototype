@@ -87,13 +87,6 @@ body {
     margin-left: left;
 }
 
-.course-container1 {
-    display: flex;
-    flex-direction: column; /* Stacks items vertically */
-    gap: 10px; /* Adds space between items */
-    margin-left: left;
-}
-
 .course-box {
     display: flex; 
     align-items: center; 
@@ -480,4 +473,14 @@ header {
     display: block;
   }
 
-  
+  .requirements{
+    display: flex;
+    flex-direction: column; /* Stacks items vertically */
+    gap: 10px; /* Adds space between items */
+    margin-left: left;
+    font-size: 18px;
+  }
+
+  .requirements div:hover{
+    cursor: pointer;
+  }
