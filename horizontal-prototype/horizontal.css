@@ -478,7 +478,7 @@ header {
     flex-direction: column; /* Stacks items vertically */
     gap: 10px; /* Adds space between items */
     margin-left: left;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .requirements div:hover{
