@@ -37,12 +37,11 @@ const CourseSearch = () => {
         <>
         <Header text = "TimeTable Home Page"/>
         <div className="container">
-        <div className="to_planner">
-            <a href="./horizontal-planner.html">Academic Planner ▼</a>
-            <Link to="/planner"> 
-                Academic Planner ▼
-            </Link>
-        </div>
+        <Link to="/planner"> 
+            <div className="to_planner">
+            Academic Planner ▼
+            </div>
+        </Link>
         <div className="vertical-stack-container">
         <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
             <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%', 
@@ -91,13 +90,12 @@ const CourseSearch = () => {
             </div>
             <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
                 
-            
+            {/* pass selectedCourses to the Schedule component */}
+            <Link to="/schedule" state={{ selectedCourses }}> 
                 <div className="to_schedule">
-                    {/* pass selectedCourses to the Schedule component */}
-                    <Link to="/schedule" state={{ selectedCourses }}> 
-                        Proceed to Schedule ▶
-                    </Link>
+                    Proceed to Schedule ▶
                 </div>
+            </Link>
             </div>
             </div>
         </div>

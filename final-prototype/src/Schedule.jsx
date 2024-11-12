@@ -240,9 +240,11 @@ function Schedule() {
                   <div className="to_timetable2" onClick = {handleReturnToTimetable}>
                     ◀ Return to Timetable
                   </div>
-                  <div className="to_enroll">
-                    Enroll ▶
-                  </div>
+                </div>
+                <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
+                    <div className="to_enroll">
+                        Enroll ▶
+                    </div>
                 </div>
                 
               </div>
