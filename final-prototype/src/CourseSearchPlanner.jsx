@@ -94,11 +94,11 @@ const CourseSearchPlanner = () => {
                 </div>
                 
             </div>
+            <Link to="/" state = {{plannedCourses}}>
             <div className="to_timetable2" style = {{right: '15px'}}>
-                <Link to="/" state = {{plannedCourses}}>
-                    Proceed to Timetable ▶
-                </Link>
+                Proceed to Timetable ▶
             </div>
+            </Link>
         </>
     );
 };
