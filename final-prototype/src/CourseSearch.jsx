@@ -51,68 +51,70 @@ const CourseSearch = () => {
         <>
         <Header text = "TimeTable Home Page"/>
         <div className="container">
-        <Link to="/planner"> 
-            <div className="to_planner">
-            Academic Planner ▼
-            </div>
-        </Link>
-        <div className="vertical-stack-container">
-        <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
-            <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%', 
-                // border: '1px solid black'  
-                }}>
-                <div style={{ flex: '0 1 300px', paddingRight: '20px' }}>
-                    <Filters selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} 
-                    // courses={filteredCourses} 
-                    />
-                    <SearchBar 
-                    courses={filteredCourses} 
-                    onCourseSelect={onCourseSelect} />
-                    
-                </div>
-
-                {selectedCourse && (
-                    <div className="course-widget">
-                        <h2>Selected Course Details:</h2>
-                        <p><strong>{selectedCourse.code}</strong> - {selectedCourse.name}</p>
-                        <p>{selectedCourse.description}</p>
-                        <p>Prerequisites: {selectedCourse.prerequisites}</p>
-                        <p>Antirequisites: {selectedCourse.antirequisites}</p>
-                        <p>{selectedCourse.units} Unit(s)</p>
-                        <button className="add-to-plan-button" onClick={handleAddCourseToTable}>
-                                + Add to Course Table
-                        </button>
-                    </div>
-                )}
-            </div>
-
-            <div className="box" style = {{width: "50%"}}>
-                <div className="vertical-stack-container">
-                    <div class="help-container">
-                        <button class="select-button">
-                        <img src={require('./images/help.png')} alt="Search" 
-                        className="button-image" 
-                        />
-                        </button>
-                    </div>
-                    {selectedCourses.length > 0 && <CourseTable courses={selectedCourses} onCourseRemove={handleCourseRemove} />}
-                </div>
-                
-            </div>
-            
-            
-            
-                
-            </div>
-            <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
-                
-            {/* pass selectedCourses to the Schedule component */}
-            <Link to="/schedule" state={{ selectedCourses }}> 
-                <div className="to_schedule">
-                    Proceed to Schedule ▶
+            <Link to="/planner"> 
+                <div className="to_planner">
+                Academic Planner ▼
                 </div>
             </Link>
-            </div>
+            <div className="vertical-stack-container">
+                <div style = {{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%"}}>
+                    <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%', 
+                        // border: '1px solid black'  
+                        }}>
+                        <div style={{ flex: '0 1 300px', paddingRight: '20px' }}>
+                            <Filters selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} 
+                            // courses={filteredCourses} 
+                            />
+                            <SearchBar 
+                            courses={filteredCourses} 
+                            onCourseSelect={onCourseSelect} />
+                            
+                        </div>
+
+                        {selectedCourse && (
+                            <div className="course-widget">
+                                <h2>Selected Course Details:</h2>
+                                <p><strong>{selectedCourse.code}</strong> - {selectedCourse.name}</p>
+                                <p>{selectedCourse.description}</p>
+                                <p>Prerequisites: {selectedCourse.prerequisites}</p>
+                                <p>Antirequisites: {selectedCourse.antirequisites}</p>
+                                <p>{selectedCourse.units} Unit(s)</p>
+                                <button className="add-to-plan-button" onClick={handleAddCourseToTable}>
+                                        + Add to Course Table
+                                </button>
+                            </div>
+                        )}
+                    </div>
+
+                    <div className="box" style = {{width: "50%"}}>
+                        <div className="vertical-stack-container">
+                            <div class="help-container">
+                                <button class="select-button">
+                                <img src={require('./images/help.png')} alt="Search" 
+                                className="button-image" 
+                                />
+                                </button>
+                            </div>
+                            <div style = {{marginLeft: "auto"}}>
+                                {selectedCourses.length > 0 && <CourseTable courses={selectedCourses} onCourseRemove={handleCourseRemove} />}
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                    
+                    
+                        
+                </div>
+                    {/* <div style = {{display: "flex", flexDirection: "row", width: "100%"}}> */}
+                        
+                        {/* pass selectedCourses to the Schedule component */}
+                <Link to="/schedule" state={{ selectedCourses }}> 
+                    <div className="to_schedule">
+                        Proceed to Schedule ▶
+                    </div>
+                </Link>
+                    {/* </div> */}
             </div>
         </div>
         </>
