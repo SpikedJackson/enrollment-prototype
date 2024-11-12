@@ -614,18 +614,13 @@ header {
   border-left: 45px solid transparent;
   transform: rotate(-90deg) translate(-70%, -185px);
   transform-origin: center;
-
+  display: flex;
+  justify-content: center; /* Horizontally center the text */
+  align-items: flex-end;
+  padding: 0px; /* Optional: Adjust padding if needed */
   transition-duration: 0.4s;
   cursor: pointer;
-}
-
-.to_planner a {
-  position: absolute;
-  top: -25px;
-  left: 25%;
-  text-decoration: none;
-  color: black;
-  margin-right: 5px;
+  color: black
 }
 
 .to_planner:hover {
@@ -646,14 +641,9 @@ header {
   padding: 10px 15px;
   transition-duration: 0.4s;
   cursor: pointer;
-}
-
-.to_schedule a {
-
   text-align: center;
   text-decoration: none;
   color: black;
-
 }
 
 .to_schedule:hover {
@@ -705,6 +695,9 @@ header {
   cursor: pointer;
   width: 200px;
   text-align: center;
+  text-align: center;
+  text-decoration: none;
+  color: black;
 }
 
 .to_timetable2 a {

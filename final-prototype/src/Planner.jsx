@@ -17,7 +17,6 @@ function Planner() {
                         </div>
                         <CourseSearchPlanner />
                     </div>
-                    
                 </div>
             </div>
         </>

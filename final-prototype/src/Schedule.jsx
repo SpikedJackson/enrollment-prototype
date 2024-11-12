@@ -222,13 +222,13 @@ function Schedule() {
                           <img src={require('./images/shuffle.png')} alt="Shuffle" className="button-image" style = {{width: '25px', height: '25px'}} />
                       </button> */}
                       <button className="no_func">
-                          <img src={require('./images/backward-arrow.png')} alt="backward-arrow" className="button-image" style = {{width: '25px', height: '25px'}} />
+                          <img src={require('./images/backward-arrow.png')} alt="backward-arrow" className="button-image" style = {{width: '15px', height: '15px'}} />
                       </button>
                         <div style = {{display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px"}}>
                             <strong>Result 1 of 10</strong>
                         </div>
                       <button className="no_func">
-                          <img src={require('./images/forward-arrow.png')} alt="forward-arrow" className="button-image" style = {{width: '25px', height: '25px'}} />
+                          <img src={require('./images/forward-arrow.png')} alt="forward-arrow" className="button-image" style = {{width: '15px', height: '15px'}} />
                       </button>
                       
                     </div>
@@ -240,9 +240,11 @@ function Schedule() {
                   <div className="to_timetable2" onClick = {handleReturnToTimetable}>
                     ◀ Return to Timetable
                   </div>
-                  <div className="to_enroll">
-                    Enroll ▶
-                  </div>
+                </div>
+                <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
+                    <div className="to_enroll">
+                        Enroll ▶
+                    </div>
                 </div>
                 
               </div>
