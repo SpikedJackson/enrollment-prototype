@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import colors from './colors';
 
 function Schedule() {
     const location = useLocation();
+    const navigate = useNavigate();
     const { selectedCourses } = location.state || { selectedCourses: [] }; //make it an empty array if no data passed
     const [selectedCourse, setSelectedCourse] = useState(null); //for viewing extra info on a selected course
     const [expandedCourse, setExpandedCourse] = useState(null);
     
     //set selected courses to passed in courses
     const [courses, setCourses] = useState(selectedCourses);
+
+    const handleReturnToTimetable = () => {
+        navigate("/", {state: { selectedCourses: courses}}); //pass selected courses back to timetable homepage
+    }
 
     //function to handle removing a course from the schedule
     const handleRemoveCourse = (courseToRemove) => {
@@ -218,10 +223,8 @@ function Schedule() {
                 </div>
                 </div>
                 <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
-                  <div className="to_timetable2">
-                    <Link to="/">
-                      ◀ Return to Timetable
-                    </Link>
+                  <div className="to_timetable2" onClick = {handleReturnToTimetable}>
+                    ◀ Return to Timetable
                   </div>
                   <div className="to_enroll">
                     Enroll ▶

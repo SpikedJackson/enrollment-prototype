@@ -3,12 +3,14 @@ import SearchBar from './SearchBar';
 import Filters from './Filters';
 import courses from './courses.js';
 import CourseTable from './CourseTable';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const CourseSearch = () => {
+    const location = useLocation();
+    const { selectedCourses: passedCourses } = location.state || { selectedCourses: [] }; //get passed courses from Schedule
     const [selectedFilter, setSelectedFilter] = useState('all'); 
     const [selectedCourse, setSelectedCourse] = useState(null); 
-    const [selectedCourses, setSelectedCourses] = useState([]);
+    const [selectedCourses, setSelectedCourses] = useState(passedCourses || []); //initialize selected courses with data from Schedule, or else empty array
 
     //filter the courses based on the selected filter
     const filteredCourses = selectedFilter === 'all' 
@@ -59,7 +61,7 @@ const CourseSearch = () => {
                         <p>Prerequisites: {selectedCourse.prerequisites}</p>
                         <p>Antirequisites: {selectedCourse.antirequisites}</p>
                         <p>{selectedCourse.units} Unit(s)</p>
-                        <button onClick={handleAddCourseToTable}>
+                        <button className="add-to-plan-button" onClick={handleAddCourseToTable}>
                                 + Add to Course Table
                         </button>
                     </div>
