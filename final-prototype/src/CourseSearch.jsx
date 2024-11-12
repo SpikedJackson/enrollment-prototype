@@ -9,18 +9,32 @@ import { Link, useLocation } from 'react-router-dom';
 const CourseSearch = () => {
     const location = useLocation();
     const { selectedCourses: passedCourses } = location.state || { selectedCourses: [] }; //get passed courses from Schedule
+    const { plannedCourses: passedPlannedCourses } = location.state || { plannedCourses: [] };
     const [selectedFilter, setSelectedFilter] = useState('all'); 
     const [selectedCourse, setSelectedCourse] = useState(null); 
     const [selectedCourses, setSelectedCourses] = useState(passedCourses || []); //initialize selected courses with data from Schedule, or else empty array
+    const [plannedCourses, setPlannedCourses] = useState(passedPlannedCourses || []); //initialize planned courses with data from Planner, or else empty array
+    
 
     //filter the courses based on the selected filter
-    const filteredCourses = selectedFilter === 'all' 
-        ? courses 
-        : courses.filter(course => course.filter === selectedFilter);
+    const filteredCourses = (() => {
+        switch (selectedFilter) {
+            case 'all':
+                return courses;
+            case 'planned':
+                return plannedCourses; 
+            case 'required':
+                return courses.filter(course => course.filter === 'required');
+            default:
+                return courses;
+        }
+    })();
 
     const onCourseSelect = (course) => {
         setSelectedCourse(course); //use to display course information
     };
+
+
 
     
     const handleAddCourseToTable = () => {
@@ -48,7 +62,9 @@ const CourseSearch = () => {
                 // border: '1px solid black'  
                 }}>
                 <div style={{ flex: '0 1 300px', paddingRight: '20px' }}>
-                    <Filters selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} courses={filteredCourses} />
+                    <Filters selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} 
+                    // courses={filteredCourses} 
+                    />
                     <SearchBar 
                     courses={filteredCourses} 
                     onCourseSelect={onCourseSelect} />

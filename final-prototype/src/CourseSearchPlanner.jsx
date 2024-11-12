@@ -4,11 +4,12 @@ import Filters from './Filters';
 import courses from './courses.js';
 import CourseTablePlanner from './CourseTablePlanner';
 import YearSelect from './YearSelect.jsx';
+import { Link } from 'react-router-dom';
 
 const CourseSearchPlanner = () => {
     const [selectedFilter, setSelectedFilter] = useState('all'); 
     const [selectedCourse, setSelectedCourse] = useState(null); 
-    const [selectedCourses, setSelectedCourses] = useState([]);
+    const [plannedCourses, setplannedCourses] = useState([]);
     const [currentYear, setCurrentYear] = useState(1);
     const [allYears, setAllYears] = useState(false);
     const [years, setYears] = useState([1, 2, 3, 4]);
@@ -25,14 +26,14 @@ const CourseSearchPlanner = () => {
 
     
     const handleAddCourseToTable = () => {
-        if (selectedCourse && !selectedCourses.some(course => course.code === selectedCourse.code)) {
+        if (selectedCourse && !plannedCourses.some(course => course.code === selectedCourse.code)) {
             selectedCourse.year = selectedYear
-            setSelectedCourses([...selectedCourses, selectedCourse]); //add course to the table
+            setplannedCourses([...plannedCourses, selectedCourse]); //add course to the table
         }
     };
 
     const handleCourseRemove = (courseToRemove) => {
-        setSelectedCourses(selectedCourses.filter(course => course.code !== courseToRemove.code)); //remove course from table
+        setplannedCourses(plannedCourses.filter(course => course.code !== courseToRemove.code)); //remove course from table
     };
 
     const handleYearChange = (event) => {
@@ -89,9 +90,14 @@ const CourseSearchPlanner = () => {
             <div className="box" style={{flex:'0.5'}}>
                 <div className="vertical-stack-container">
                     <YearSelect currentYear = {currentYear} setCurrentYear = {setCurrentYear} allYears={allYears} setAllYears={setAllYears} years={years} setYears={setYears}/>
-                    {selectedCourses.length > 0 && <CourseTablePlanner courses={selectedCourses} onCourseRemove = {handleCourseRemove} allYears={allYears} currentYear={currentYear} years={years}/>}
+                    {plannedCourses.length > 0 && <CourseTablePlanner courses={plannedCourses} onCourseRemove = {handleCourseRemove} allYears={allYears} currentYear={currentYear} years={years}/>}
                 </div>
                 
+            </div>
+            <div className="to_timetable2" style = {{right: '15px'}}>
+                <Link to="/" state = {{plannedCourses}}>
+                    Proceed to Timetable ▶
+                </Link>
             </div>
         </>
     );
