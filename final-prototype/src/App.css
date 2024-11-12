@@ -163,7 +163,6 @@ table tr td {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 50px auto;
   background-color: transparent;
-  padding: 10px;
   align-content: space-evenly;
   min-width: 370px;
   gap: 2px;
@@ -175,8 +174,10 @@ table tr td {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 50px auto;
   background-color: transparent;
-  padding: 10px;
   align-content: space-evenly;
+  min-width: 370px;
+  gap: 2px;
+  margin-bottom: 10px;
 }
 
 .year-row {
@@ -194,6 +195,7 @@ table tr td {
 }
 
 .course-slot-planner {
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -201,7 +203,6 @@ table tr td {
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  color: black;
   background-color: transparent;
   font-size: 14px;
   font-weight: bold;
@@ -216,6 +217,7 @@ table tr td {
 
 .course-info {
   display: block;
+  color: white;
   text-align: center;
   transition: opacity 0.3s ease;
 }
@@ -237,10 +239,13 @@ table tr td {
 }
 
 .delete-button img {
+  filter: brightness(0) invert(1);
   width: 24px;
   /* Adjust the size of the image */
   height: 24px;
   /* Adjust the size of the image */
+  transition: width 0.3s ease, height 0.3s ease;
+  /* Optional smooth transition for resizing */
 }
 
 .course-slot-planner:hover .course-info {
@@ -485,6 +490,10 @@ header {
   /* Slight lift effect on hover */
 }
 
+.course-box-enrolment img {
+  filter: brightness(0) invert(1);
+}
+
 
 .course-box-schedule {
   display: flex;
@@ -528,16 +537,16 @@ header {
   padding: 10px;
 }
 
+.course-box-header img {
+  filter: brightness(0) invert(1);
+}
+
 .course-widget1 {
   padding: 10px;
   /* background-color: #f0f0f0; */
   border-top: 1px solid #ccc;
   /* width: 100%; */
 }
-
-
-
-
 
 .box3-container {
   display: flex;
@@ -559,7 +568,6 @@ header {
 
 
 .course-info {
-  margin-left: 5px;
   display: flex;
   align-items: center;
 }
