@@ -3,6 +3,7 @@ import SearchBar from './SearchBar';
 import Filters from './Filters';
 import courses from './courses.js';
 import CourseTable from './CourseTable';
+import Header from './Header.jsx';
 import { Link, useLocation } from 'react-router-dom';
 
 const CourseSearch = () => {
@@ -34,6 +35,8 @@ const CourseSearch = () => {
 
     return (
         <>
+        <Header text = "TimeTable Home Page"/>
+        <div className="container">
         <div className="to_planner">
             <a href="./horizontal-planner.html">Academic Planner ▼</a>
             <Link to="/planner"> 
@@ -97,6 +100,7 @@ const CourseSearch = () => {
                 </div>
             </div>
             </div>
+        </div>
         </>
     );
 };

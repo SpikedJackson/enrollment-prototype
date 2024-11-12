@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import colors from './colors';
+import Header from './Header';
 
 function Schedule() {
     const location = useLocation();
@@ -38,6 +39,7 @@ function Schedule() {
 
     return (
         <>
+            <Header text = "Course Schedule"/>
             <div className="container">
               <div className="vertical-stack-container">
                 <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
@@ -215,9 +217,21 @@ function Schedule() {
                             <div className="course-slot" style = {{backgroundColor: colors[4], textAlign: 'center'}}>{courses[4].code} LEC</div>
                         )}
                     </div>
-                      <button className="no_func">
+                    <div style = {{display: "flex", flexDirection: "row", width: "30%", minWidth: "250px", justifyContent: "space-between"}}>
+                      {/* <button className="no_func">
                           <img src={require('./images/shuffle.png')} alt="Shuffle" className="button-image" style = {{width: '25px', height: '25px'}} />
+                      </button> */}
+                      <button className="no_func">
+                          <img src={require('./images/backward-arrow.png')} alt="backward-arrow" className="button-image" style = {{width: '25px', height: '25px'}} />
                       </button>
+                        <div style = {{display: "flex", alignItems: "center", justifyContent: "center", fontSize: "18px"}}>
+                            <strong>Result 1 of 10</strong>
+                        </div>
+                      <button className="no_func">
+                          <img src={require('./images/forward-arrow.png')} alt="forward-arrow" className="button-image" style = {{width: '25px', height: '25px'}} />
+                      </button>
+                      
+                    </div>
                     
                   </div>
                 </div>

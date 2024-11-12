@@ -1,25 +1,30 @@
 import { Link } from 'react-router-dom';
 import Requirements from './Requirements';
 import CourseSearchPlanner from './CourseSearchPlanner';
+import Header from './Header';
 
 function Planner() {
 
     return (
-        <div className="container">
-            <div className="vertical-stack-container">
-                <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
-                    <div className="box" style={{flex:'0.3'}}>
-                        <Requirements />
+        <>
+            <Header text = "Planner"/>
+            <div className="container">
+                
+                <div className="vertical-stack-container">
+                    <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
+                        <div className="box" style={{flex:'0.3'}}>
+                            <Requirements />
+                        </div>
+                        <CourseSearchPlanner />
                     </div>
-                    <CourseSearchPlanner />
-                </div>
-                <div className="to_timetable2" style = {{right: '15px'}}>
-                    <Link to="/">
-                        Proceed to Timetable ▶
-                    </Link>
+                    <div className="to_timetable2" style = {{right: '15px'}}>
+                        <Link to="/">
+                            Proceed to Timetable ▶
+                        </Link>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
