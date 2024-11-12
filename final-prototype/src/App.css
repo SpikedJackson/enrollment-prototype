@@ -460,7 +460,7 @@ header {
 .course-container {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
+  width: 100%;
 }
 
 
