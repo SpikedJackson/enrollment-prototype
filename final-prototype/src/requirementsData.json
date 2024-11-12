@@ -61,33 +61,28 @@
                 "label": "COMPSCI Requirements",
                 "children": [
                     {
-                        "label": "COMPSCI 1DM3"
+                        "label": "COMPSCI 2AC3"
                     },
                     {
-                        "label": "COMPSCI 1JC3"
+                        "label": "COMPSCI 2C03"
                     },
                     {
-                        "label": "COMPSCI 1MD3"
+                        "label": "COMPSCI 2DB3"
                     },
                     {
-                        "label": "COMPSCI 1XC3"
+                        "label": "COMPSCI 2GA3"
                     },
                     {
-                        "label": "COMPSCI 1XD3"
-                    }
-                ]
-            },
-            {
-                "label": "MATH Requirements",
-                "children": [
-                    {
-                        "label": "MATH 1B03"
+                        "label": "COMPSCI 2LC3"
                     },
                     {
-                        "label": "MATH 1ZA3"
+                        "label": "COMPSCI 2ME3"
                     },
                     {
-                        "label": "MATH 1ZB3"
+                        "label": "COMPSCI 2SD3"
+                    },
+                    {
+                        "label": "COMPSCI 2XC3"
                     }
                 ]
             },
@@ -96,14 +91,6 @@
                 "children": [
                     {
                         "label": "6 Units"
-                    }
-                ]
-            },
-            {
-                "label": "Other",
-                "children": [
-                    {
-                        "label": "ENGINEER 1A00 or WHMIS 1A00"
                     }
                 ]
             }
@@ -116,33 +103,35 @@
                 "label": "COMPSCI Requirements",
                 "children": [
                     {
-                        "label": "COMPSCI 1DM3"
+                        "label": "COMPSCI 3AC3"
                     },
                     {
-                        "label": "COMPSCI 1JC3"
+                        "label": "COMPSCI 3MI3"
                     },
                     {
-                        "label": "COMPSCI 1MD3"
+                        "label": "COMPSCI 3N03"
                     },
                     {
-                        "label": "COMPSCI 1XC3"
+                        "label": "COMPSCI 3SH3"
                     },
                     {
-                        "label": "COMPSCI 1XD3"
+                        "label": "COMPSCI 3TB3"
                     }
                 ]
             },
             {
-                "label": "MATH Requirements",
+                "label": "STATS Requirements",
                 "children": [
                     {
-                        "label": "MATH 1B03"
-                    },
+                        "label": "STATS 3D03 or STATS 3Y03"
+                    }
+                ]
+            },
+            {
+                "label": "Technical Electives",
+                "children": [
                     {
-                        "label": "MATH 1ZA3"
-                    },
-                    {
-                        "label": "MATH 1ZB3"
+                        "label": "6 Units"
                     }
                 ]
             },
@@ -151,14 +140,6 @@
                 "children": [
                     {
                         "label": "6 Units"
-                    }
-                ]
-            },
-            {
-                "label": "Other",
-                "children": [
-                    {
-                        "label": "ENGINEER 1A00 or WHMIS 1A00"
                     }
                 ]
             }
@@ -171,33 +152,15 @@
                 "label": "COMPSCI Requirements",
                 "children": [
                     {
-                        "label": "COMPSCI 1DM3"
-                    },
-                    {
-                        "label": "COMPSCI 1JC3"
-                    },
-                    {
-                        "label": "COMPSCI 1MD3"
-                    },
-                    {
-                        "label": "COMPSCI 1XC3"
-                    },
-                    {
-                        "label": "COMPSCI 1XD3"
+                        "label": "COMPSCI 4ZP3 A/B"
                     }
                 ]
             },
             {
-                "label": "MATH Requirements",
+                "label": "Technical Electives",
                 "children": [
                     {
-                        "label": "MATH 1B03"
-                    },
-                    {
-                        "label": "MATH 1ZA3"
-                    },
-                    {
-                        "label": "MATH 1ZB3"
+                        "label": "12 Units"
                     }
                 ]
             },
@@ -205,15 +168,7 @@
                 "label": "Electives",
                 "children": [
                     {
-                        "label": "6 Units"
-                    }
-                ]
-            },
-            {
-                "label": "Other",
-                "children": [
-                    {
-                        "label": "ENGINEER 1A00 or WHMIS 1A00"
+                        "label": "12 Units"
                     }
                 ]
             }

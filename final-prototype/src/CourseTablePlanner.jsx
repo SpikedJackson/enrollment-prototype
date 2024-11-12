@@ -3,10 +3,12 @@ import React from 'react';
 const CourseTablePlanner = ({ courses, onCourseRemove, allYears, currentYear, years }) => {
     const displayCourse = (course) => {
         return (
-            <div className="display-course">
-                {course.code}
-                <button onClick={() => onCourseRemove(course)} style={{ marginLeft: '10px' }}>
-                    <img src={require('./images/delete.png')} className="button-image" style={{padding:'0px'}} />
+            <div>
+                <div className="course-info">
+                    {course.code}
+                </div>
+                <button className="delete-button">
+                    <img src={require('./images/delete.png')} className="button-image" />
                 </button>
             </div>
         )
@@ -14,11 +16,11 @@ const CourseTablePlanner = ({ courses, onCourseRemove, allYears, currentYear, ye
 
     return (
         <div className="course-container">
+            <div className="timetable-header">Yearly Planner</div>
             {courses.length > 0 ? (
                 <>
                     {allYears ? <>
                         <div id="All Years" class="tab-content">
-                            legend: <font color="#3a8ce0">■</font> = planned, <font color="#e7f473">■</font> = currently enrolled, <font color="#38e150">■</font> = completed
                             <div class="planner">
                                 {years.map((year) => (
                                     <>
@@ -26,7 +28,7 @@ const CourseTablePlanner = ({ courses, onCourseRemove, allYears, currentYear, ye
                                         <div class="course-row">
                                             {courses.map((course) => (
                                                 (course.year === year) &&
-                                                <div class="course-slot-planner planned">
+                                                <div class="course-slot-planner planned" onClick={() => onCourseRemove(course)}>
                                                     {displayCourse(course)}
                                                 </div>
                                             ))}
@@ -34,6 +36,7 @@ const CourseTablePlanner = ({ courses, onCourseRemove, allYears, currentYear, ye
                                     </>
                                 ))}
                             </div>
+                            legend: <font color="#3a8ce0">■</font> = planned, <font color="#e7f473">■</font> = currently enrolled, <font color="#38e150">■</font> = completed
                         </div>
                     </> : <>
                         <div class="tab-content">
@@ -42,7 +45,7 @@ const CourseTablePlanner = ({ courses, onCourseRemove, allYears, currentYear, ye
                                 <div class="course-row">
                                     {courses.map((course) => (
                                         (course.year === currentYear /**&& course.planned === true */) &&
-                                        <div class="course-slot-planner planned">
+                                        <div class="course-slot-planner planned" onClick={() => onCourseRemove(course)}>
                                             {displayCourse(course)}
                                         </div>
                                     ))}

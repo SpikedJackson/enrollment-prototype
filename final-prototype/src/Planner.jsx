@@ -8,7 +8,7 @@ function Planner() {
         <div className="container">
             <div className="vertical-stack-container">
                 <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
-                    <div className="box" style={{flex:'0.5'}}>
+                    <div className="box" style={{flex:'0.3'}}>
                         <Requirements />
                     </div>
                     <CourseSearchPlanner />
