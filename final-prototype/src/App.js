@@ -9,8 +9,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <Header text = "Enrollment"/>
-      <div className="container">
+      {/* <Header text = "Enrollment"/> */}
+      {/* <div className="container"> */}
         <Router>
           <Routes>
             <Route path="/" element={<CourseSearch />} />
@@ -18,7 +18,7 @@ function App() {
             <Route path="/planner" element={<Planner />} />
           </Routes>
         </Router>
-      </div>
+      {/* </div> */}
       
       
 

@@ -388,10 +388,25 @@ table tr td {
 
 header {
   background-color: #8B85C1;
-  text-align: center;
-  font-size: 40px;
   color: white;
-  /* min-width: 1200px; */
+  display: flex;
+  justify-content: center;  
+  align-items: center;    
+  position: relative;     
+  width: 100%;
+  padding: 10px 20px;      
+  height: 40px;
+}
+
+.sign-out {
+  position: absolute;
+  right: 60px;        
+  text-align: right;
+}
+
+.sign-out:hover {
+  color: darkgray; 
+  cursor: pointer;
 }
 
 .planner-table-table {
