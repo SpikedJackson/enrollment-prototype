@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import colors from './colors';
 
 function Schedule() {
@@ -103,14 +103,14 @@ function Schedule() {
                         {courses.length === 0 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[0]}}>{courses[0].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[0], textAlign: 'center'}}>{courses[0].code} LEC</div>
                         )}
                         <div className="course-slot"></div>
                         <div className="course-slot"></div>
                         {courses.length <= 1 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[1]}}>{courses[1].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[1], textAlign: 'center'}}>{courses[1].code} LEC</div>
                         )}
                         <div className="course-slot"></div>
 
@@ -119,12 +119,12 @@ function Schedule() {
                         {courses.length <= 2 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[2]}}>{courses[2].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[2], textAlign: 'center'}}>{courses[2].code} TUT</div>
                         )}
                         {courses.length <= 3 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[3]}}>{courses[3].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[3], textAlign: 'center'}}>{courses[3].code} LEC</div>
                         )}
                         <div className="course-slot"></div>
                         <div className="course-slot"></div>
@@ -133,18 +133,18 @@ function Schedule() {
                         {courses.length <= 1 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[1]}}>{courses[1].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[1], textAlign: 'center'}}>{courses[1].code} TUT</div>
                         )}
                         <div className="course-slot"></div>
                         {courses.length <= 4 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[4]}}>{courses[4].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[4], textAlign: 'center'}}>{courses[4].code} LEC</div>
                         )}
                         {courses.length === 0 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[0]}}>{courses[0].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[0], textAlign: 'center'}}>{courses[0].code} TUT</div>
                         )}
                         <div className="course-slot"></div>
 
@@ -155,25 +155,25 @@ function Schedule() {
                         {courses.length <= 2 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[2]}}>{courses[2].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[2], textAlign: 'center'}}>{courses[2].code} LEC</div>
                         )}
                         {courses.length <= 3 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[3]}}>{courses[3].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[3], textAlign: 'center'}}>{courses[3].code} TUT</div>
                         )}
 
                         <div className="time-column">1:00 - 2:00</div>
                         {courses.length === 0 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[0]}}>{courses[0].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[0], textAlign: 'center'}}>{courses[0].code} LEC</div>
                         )}
                         <div className="course-slot"></div>
                         {courses.length <= 1 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[1]}}>{courses[1].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[1], textAlign: 'center'}}>{courses[1].code} LEC</div>
                         )}
                         <div className="course-slot"></div>
                         <div className="course-slot"></div>
@@ -183,13 +183,13 @@ function Schedule() {
                         {courses.length <= 2 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[2]}}>{courses[2].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[2], textAlign: 'center'}}>{courses[2].code} LEC</div>
                         )}
                         <div className="course-slot"></div>
                         {courses.length <= 4 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[4]}}>{courses[4].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[4], textAlign: 'center'}}>{courses[4].code} TUT</div>
                         )}
                         <div className="course-slot"></div>
 
@@ -200,7 +200,7 @@ function Schedule() {
                         {courses.length <= 3 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[3]}}>{courses[3].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[3], textAlign: 'center'}}>{courses[3].code} LEC</div>
                         )}
                         <div className="course-slot"></div>
 
@@ -212,7 +212,7 @@ function Schedule() {
                         {courses.length <= 4 ? (
                             <div className="course-slot"></div>
                         ) : (
-                            <div className="course-slot" style = {{backgroundColor: colors[4]}}>{courses[4].code}</div>
+                            <div className="course-slot" style = {{backgroundColor: colors[4], textAlign: 'center'}}>{courses[4].code} LEC</div>
                         )}
                     </div>
                       <button className="no_func">
