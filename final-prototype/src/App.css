@@ -15,12 +15,13 @@
 }
 
 .vertical-stack-container {
-  display: flex;               
-  flex-direction: column;     
-  align-items: center;         
-  justify-content: flex-start; /* align items at the top */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  /* align items at the top */
   width: 100%;
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: 0;
 }
 
@@ -51,6 +52,7 @@ ul,
   border: 2px solid #D4CDF4;
   border-radius: 4px;
 }
+
 .select-container:hover {
   border: 2px solid #8B85C1;
   transition-duration: 0.4s;
@@ -67,8 +69,8 @@ input[type="radio"] {
 .search-input {
   padding: 10px;
   font-size: 16px;
-  
-  
+
+
   /* rounded left corners */
   outline: none;
 }
@@ -90,11 +92,14 @@ input[type="radio"] {
 }
 
 .search-dropdown {
-  position: absolute; 
+  position: absolute;
   /*z-index: 1000;  Ensure it's on top */
-  background-color: white; /* Background for dropdown */
-  border: 1px solid #ccc; /* Border for dropdown */
-  width: 100%; /* Match input width */
+  background-color: white;
+  /* Background for dropdown */
+  border: 1px solid #ccc;
+  /* Border for dropdown */
+  width: 100%;
+  /* Match input width */
   padding: 0;
   margin: 0;
 }
@@ -127,7 +132,7 @@ input[type="radio"] {
 
 
 .no_func:hover {
-  background-color:  #4CAF50;
+  background-color: #4CAF50;
   border: 2px solid #4CAF50;
 }
 
@@ -161,6 +166,8 @@ table tr td {
   padding: 10px;
   align-content: space-evenly;
   min-width: 370px;
+  gap: 2px;
+  margin-bottom: 10px;
 }
 
 .planner_single_year {
@@ -189,16 +196,63 @@ table tr td {
 .course-slot-planner {
   display: flex;
   flex-direction: column;
-  /* Stacks items vertically */
-  margin-left: left;
   align-items: center;
   justify-content: center;
-  padding: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
   color: black;
   background-color: transparent;
   font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  position: relative;
   height: 50px;
+  width: 100px;
+  /* Set a fixed width or adjust based on content */
+  cursor: pointer;
+  /* Change cursor to indicate it's clickable */
 }
+
+.course-info {
+  display: block;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+.delete-button {
+  display: none;
+  /* Hide the button by default */
+  position: absolute;
+  top: 50%;
+  /* Center vertically */
+  left: 50%;
+  /* Center horizontally */
+  transform: translate(-50%, -50%);
+  /* Adjust positioning for exact centering */
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.delete-button img {
+  width: 24px;
+  /* Adjust the size of the image */
+  height: 24px;
+  /* Adjust the size of the image */
+}
+
+.course-slot-planner:hover .course-info {
+  opacity: 0;
+  /* Hide the course code on hover */
+}
+
+.course-slot-planner:hover .delete-button {
+  display: block;
+  /* Show the delete button on hover */
+}
+
 
 .planned {
   background-color: #3a8ce0;
@@ -220,7 +274,7 @@ table tr td {
   transition: transform 0.3s ease-in-out;
 }
 
-.tree-node-container > .tree-node {
+.tree-node-container>.tree-node {
   display: flex;
   align-items: center;
   padding: 8px 15px;
@@ -233,23 +287,23 @@ table tr td {
   transition: background-color 0.2s ease-in-out;
 }
 
-.tree-node-container > .tree-node:hover {
+.tree-node-container>.tree-node:hover {
   background-color: #f1f1f1;
 }
 
-.tree-node-container > .tree-node:not(.has-children):hover {
+.tree-node-container>.tree-node:not(.has-children):hover {
   background-color: #e9e9e9;
 }
 
-.tree-node-container > .tree-node.has-children {
+.tree-node-container>.tree-node.has-children {
   font-weight: bold;
 }
 
-.tree-node-container > .tree-node.open {
+.tree-node-container>.tree-node.open {
   background-color: #e0f7e0;
 }
 
-.tree-node-container > .tree-node > div {
+.tree-node-container>.tree-node>div {
   margin-left: 20px;
   margin-top: 5px;
 }
@@ -282,7 +336,7 @@ table tr td {
   display: flex;
   gap: 10px;
   flex-wrap: nowrap;
-  align-items: center; 
+  align-items: center;
 }
 
 .radio-container {
@@ -320,6 +374,7 @@ table tr td {
 .add-to-plan-button:active {
   transform: scale(0.9);
 }
+
 /*----------------*/
 
 header {
@@ -331,16 +386,16 @@ header {
 }
 
 .planner-table-table {
-  width: 100%;                
-  border-collapse: collapse;  
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .planner-table th,
 .planner-table td {
-  width: 150px;              
-  border: 1px solid #ccc;   
-  padding: 10px;             
-  text-align: center;           
+  width: 150px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
 }
 
 
@@ -357,12 +412,12 @@ header {
   overflow: hidden;
   margin-bottom: 1px;
   width: 100%;
-  height:max-content;
+  height: max-content;
   border-radius: 4px;
   display: flex;
   justify-content: space-between;
   gap: 3px;
-  
+
 }
 
 .tab-content {
@@ -376,17 +431,17 @@ header {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 10px 5px; 
+  padding: 10px 5px;
   transition: 0.4s;
   font-size: 17px;
-  flex: 1;  
+  flex: 1;
   /* border-bottom: 2px solid transparent;   */
   border-radius: 15px 15px 0 0;
   text-align: center;
   clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
-                                         /*-*/
+  /*-*/
 }
-  
+
 .tab button:hover {
   background-color: #8B85C1;
 }
@@ -399,21 +454,24 @@ header {
 
 .course-container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   margin-left: auto;
 }
 
 
 .course-box-enrolment {
-  display: flex; 
+  display: flex;
   /* align-items: stretch;  */
-  flex-direction: row;  
+  flex-direction: row;
   border: 1px solid #ccc;
-  border-radius: 12px; /* Round corners more */
+  border-radius: 12px;
+  /* Round corners more */
   background: #f9f9f9;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);  /* More pronounced shadow for depth */
-  min-height: 75px;  /* Increased height for a more substantial feel */
-  margin-bottom: 20px;  
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  /* More pronounced shadow for depth */
+  min-height: 75px;
+  /* Increased height for a more substantial feel */
+  margin-bottom: 20px;
   width: 300px;
   /* overflow: hidden; */
   color: white;
@@ -421,21 +479,26 @@ header {
   /* Adding a hover effect to make the box interactive */
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
+
 .course-box-enrolment:hover {
-  transform: translateY(-5px);  /* Slight lift effect on hover */
+  transform: translateY(-5px);
+  /* Slight lift effect on hover */
 }
 
 
 .course-box-schedule {
-  display: flex; 
-  align-items: stretch; 
-  flex-direction: column;  
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
   border: 1px solid #ccc;
-  border-radius: 12px; /* Round corners more */
+  border-radius: 12px;
+  /* Round corners more */
   background: #f9f9f9;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);  /* More pronounced shadow for depth */
-  min-height: 75px;  /* Increased height for a more substantial feel */
-  margin-bottom: 20px;  
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  /* More pronounced shadow for depth */
+  min-height: 75px;
+  /* Increased height for a more substantial feel */
+  margin-bottom: 20px;
   width: 500px;
   overflow: hidden;
 
@@ -450,13 +513,15 @@ header {
 }
 
 .course-box-schedule:hover {
-  transform: translateY(-5px);  /* Slight lift effect on hover */
+  transform: translateY(-5px);
+  /* Slight lift effect on hover */
 }
 
 .course-box-header {
-  display: flex; 
-  align-items: center; 
-  border-radius: 12px 12px 0px 0px; /* Round corners more */
+  display: flex;
+  align-items: center;
+  border-radius: 12px 12px 0px 0px;
+  /* Round corners more */
   background: #f9f9f9;
   color: white;
   width: 100%;
@@ -476,34 +541,34 @@ header {
 
 .box3-container {
   display: flex;
-  flex-direction: column; 
-  gap: 10px; 
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
-  
-} 
+
+}
 
 .course-box2 {
   text-align: center;
-  border: 1px solid #ccc; 
-  border-radius: 4px; 
-  background-color: #f9f9f9; 
-  width: 500px; 
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  width: 500px;
   height: 100px;
 }
 
 
 
-.course-info { 
+.course-info {
   margin-left: 5px;
-  display: flex; 
+  display: flex;
   align-items: center;
 }
 
 .course-code {
-  font-size: 18px; 
-  font-weight: bold; 
+  font-size: 18px;
+  font-weight: bold;
   text-align: center;
-   
+
 }
 
 .course-name {
@@ -522,12 +587,12 @@ header {
   border-left: 45px solid transparent;
   transform: rotate(-90deg) translate(-70%, -185px);
   transform-origin: center;
-  
+
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
-.to_planner a{
+.to_planner a {
   position: absolute;
   top: -25px;
   left: 25%;
@@ -540,7 +605,7 @@ header {
   border-top: 35px solid #8B85C1;
 }
 
-.to_schedule{
+.to_schedule {
 
   border: 2px solid #D4CDF4;
   border-radius: 4px 4px 4px 4px;
@@ -553,17 +618,17 @@ header {
   cursor: pointer;
 }
 
-.to_schedule a{
-  
+.to_schedule a {
+
   text-align: center;
   text-decoration: none;
   color: black;
-  
+
 }
 
 .to_schedule:hover {
-    border: 2px solid #8B85C1;
-    background-color: #8B85C1;
+  border: 2px solid #8B85C1;
+  background-color: #8B85C1;
 }
 
 .to_timetable {
@@ -577,12 +642,12 @@ header {
   border-left: 45px solid transparent;
   transform: rotate(90deg) translate(70%, 0px);
   transform-origin: center;
-  
+
   transition-duration: 0.4s;
   cursor: pointer;
 }
 
-.to_timetable a{
+.to_timetable a {
   position: absolute;
   top: -25px;
   left: 30%;
@@ -594,15 +659,16 @@ header {
   border-top: 35px solid #8B85C1;
 }
 
-.to_timetable2{
+.to_timetable2 {
 
   /* float: right; */
   border: 2px solid #D4CDF4;
   border-radius: 4px 4px 4px 4px;
   background-color: #D4CDF4;
-  
+
   /* position: fixed;  */
-  bottom: 15px;    /* 15px from the bottom */
+  bottom: 15px;
+  /* 15px from the bottom */
   left: 15px;
   padding: 10px;
   transition-duration: 0.4s;
@@ -611,12 +677,12 @@ header {
   text-align: center;
 }
 
-.to_timetable2 a{
-  
+.to_timetable2 a {
+
   text-align: center;
   text-decoration: none;
   color: black;
-  
+
 }
 
 .to_timetable2:hover {
@@ -625,9 +691,9 @@ header {
 }
 
 
-.to_enroll{
+.to_enroll {
 
-  
+
   border: 2px solid #D4CDF4;
   border-radius: 4px 4px 4px 4px;
   background-color: #D4CDF4;
@@ -637,12 +703,13 @@ header {
   transition-duration: 0.4s;
   cursor: pointer;
 }
-.to_enroll a{
-  
+
+.to_enroll a {
+
   text-align: center;
   text-decoration: none;
   color: black;
-  
+
 }
 
 .to_enroll:hover {
@@ -655,9 +722,11 @@ header {
 
 .timetable {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 5 days + 1 column for time */
+  grid-template-columns: repeat(6, 1fr);
+  /* 5 days + 1 column for time */
   grid-auto-rows: 1fr;
-  gap: 2px; /* Spacing between cells */
+  gap: 2px;
+  /* Spacing between cells */
   border: 1px solid #ccc;
   background-color: #fff;
   padding: 10px;
@@ -704,20 +773,21 @@ header {
 
 
 .light-blue {
-  background-color: #6BA4FF; 
+  background-color: #6BA4FF;
 }
 
 .light-pink {
-  background-color: #FF6BA4; 
+  background-color: #FF6BA4;
 }
 
 .light-orange {
-  background-color: #FFC36B; 
+  background-color: #FFC36B;
 }
 
 .dark-green {
-  background-color: #083e1f; 
+  background-color: #083e1f;
 }
+
 .red {
   background-color: #df2020;
 }
@@ -738,6 +808,7 @@ header {
   padding: 10px;
   border-radius: 4px;
 }
+
 .course-widget {
   flex: 1 1 auto;
   padding: 20px;
@@ -747,8 +818,9 @@ header {
   background-color: #f9f9f9;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   margin-left: 20px;
-  min-width: 500px; 
+  min-width: 500px;
 }
+
 /* .course-widget button {
   background-color: #D4CDF4;
   padding: 10px; 
@@ -761,6 +833,3 @@ header {
 .course-widget button:hover {
   background-color: #8B85C1;
 } */
-
-
-

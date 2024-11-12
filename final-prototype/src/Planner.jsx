@@ -6,8 +6,8 @@ function Planner() {
 
     return (
         <div className="container">
-            <div className="box" style={{flex:'0.5'}}>
-            <Requirements />
+            <div className="box" style={{ flex: '0.3' }}>
+                <Requirements />
             </div>
             <CourseSearchPlanner />
         </div>

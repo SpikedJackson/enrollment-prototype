@@ -27,7 +27,7 @@ const YearSelect = ({ currentYear, setCurrentYear, allYears, setAllYears, years,
 
     return (
         <div className="tab">
-            <button className={(allYears) ? "link active" : "link"} onClick={() => setAllYears(true)}>All Years</button>
+            <button className={(allYears) ? "link active" : "link"} onClick={() => setAllYears(true)}>All</button>
             {years.map((year) => (
                 <button className={(currentYear === year && !allYears) ? "link active" : "link"} onClick={() => handleYearClick(year)}>{year}</button>
             ))}
