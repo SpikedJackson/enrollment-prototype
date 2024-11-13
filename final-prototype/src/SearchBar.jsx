@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-const SearchBar = ({ courses, onCourseSelect }) => {
+const SearchBar = ({ courses, onCourseSelect}) => {
     const [inputValue, setInputValue] = useState('');
-    const [suggestions, setSuggestions] = useState([]);
-
+    const [suggestions, setSuggestions] = useState(courses);
+    const [selectedCourse, setSelected] = useState('');
 
 
     const handleChange = (event) => {
@@ -12,20 +12,34 @@ const SearchBar = ({ courses, onCourseSelect }) => {
 
         if (value) {
             const filteredSuggestions = courses.filter(course =>
-                course.name.toLowerCase().includes(value.toLowerCase()) || 
+                course.name.toLowerCase().includes(value.toLowerCase()) ||
                 course.code.toLowerCase().includes(value.toLowerCase())
             );
             setSuggestions(filteredSuggestions);
-        } else {
+        }
+        else if (value == '') {
+          setSuggestions(courses);
+        }
+        else {
             setSuggestions([]);
         }
     };
 
-    const handleSuggestionClick = (course) => {
-        setInputValue(course.code);
-        setSuggestions([]); 
+    const handleSuggestionClick = (course,target) => {
         onCourseSelect(course);
+        setSelected(course);
+        target.style.backgroundColor = '#E6E3F3';
+
     };
+
+    const handleSetColour = (course,target) => {
+        if (course==selectedCourse){
+          target.style.backgroundColor = '#E6E3F3';}
+        else {
+          target.style.backgroundColor = 'white';}
+
+    };
+
 
     return (
         <div style={{ position: 'relative'}}>
@@ -36,10 +50,10 @@ const SearchBar = ({ courses, onCourseSelect }) => {
                         value={inputValue}
                         onChange={handleChange}
                         placeholder="Search for a course..."
-                        className="search-input" 
+                        className="search-input"
                     />
-                    <img src={require('./images/search.png')} alt="Search" 
-                    className="button-image" 
+                    <img src={require('./images/search.png')} alt="Search"
+                    className="button-image"
                     />
                 </div>
                 <div className="select-container">
@@ -53,16 +67,17 @@ const SearchBar = ({ courses, onCourseSelect }) => {
                     {suggestions.map((course, index) => (
                         <li
                             key={index}
-                            onClick={() => handleSuggestionClick(course)}
+                            onClick={(e) => handleSuggestionClick(course,e.target)}
                             style={{
                                 padding: '10px',
                                 cursor: 'pointer',
                                 borderBottom: '1px solid #D4CDF4',
                                 borderRight: '1px solid #D4CDF4',
                                 borderLeft: '1px solid #D4CDF4',
+                                backgroundColor: (course==selectedCourse) ? '#E6E3F3' : 'white',
                             }}
                             onMouseEnter={(e) => e.target.style.backgroundColor = '#D4CDF4'}
-                            onMouseLeave={(e) => e.target.style.backgroundColor = 'white'}
+                            onMouseLeave={(e) => handleSetColour(course,e.target)}
                         >
                             {course.code} - {course.name}
 
