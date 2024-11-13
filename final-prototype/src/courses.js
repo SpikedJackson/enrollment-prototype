@@ -8,11 +8,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Ryszard Janicki',
-        seats: 'Open',
-        timeSlots: [
-            { day: 'Monday', time: '9:00 - 10:00' },
-            { day: 'Wednesday', time: '1:00 - 2:00' }
-          ]
+        seats: 'Open'
     },
     {
         name: 'Data Structures and Algorithms',
@@ -23,11 +19,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Nick Moore',
-        seats: 'Open',
-        timeSlots: [
-            { day: 'Tuesday', time: '10:00 - 11:00' },
-            { day: 'Thursday', time: '2:00 - 3:00' }
-          ]
+        seats: 'Open'
     },
     {
         name: 'Databases',
@@ -38,11 +30,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Jelle Hellings',
-        seats: 'Closed',
-        timeSlots: [
-            { day: 'Tuesday', time: '9:00 - 11:00' },
-            { day: 'Thursday', time: '3:00 - 4:00' }
-          ]
+        seats: 'Closed'
     },
     {
         name: 'Computer Architecture',
@@ -53,11 +41,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Hans Boden',
-        seats: 'Closed',
-        timeSlots: [
-            { day: 'Tuesday', time: '11:00 - 12:00' },
-            { day: 'Friday', time: '2:00 - 3:00' }
-          ]
+        seats: 'Closed'
     },
     {
         name: 'Logical Reasoning for Computer Science',
@@ -68,11 +52,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Ryszard Janicki',
-        seats: 'Open',
-        timeSlots: [
-            { day: 'Monday', time: '10:00 - 11:00' },
-            { day: 'Wednesday', time: '2:00 - 3:00' }
-          ]
+        seats: 'Open'
     },
     {
         name: 'Introduction to Software Development',
@@ -83,11 +63,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Vincent Maccio',
-        seats: 'Closed',
-        timeSlots: [
-            { day: 'Monday', time: '11:00 - 12:00' },
-            { day: 'Wednesday', time: '3:00 - 4:00' }
-          ]
+        seats: 'Closed'
     },
     {
         name: 'The Big Questions',
@@ -97,12 +73,80 @@ const courses  = [
         antirequisites: 'None',
         units: '3.0',
         filter: 'electives',
-        prof: 'Denise Geiskkovitch',
-        seats: 'Closed',
-        timeSlots: [
-            { day: 'Wednesday', time: '9:00 - 10:00' },
-            { day: 'Friday', time: '1:00 - 2:00' }
-          ]
+        prof: 'Robert Cockcroft',
+        seats: 'Closed'
+    },
+    {
+        name: 'Calculus I',
+        code: 'MATH 1X03',
+        description: 'Algebraic, geometric and numeric approaches to calculus, development of mathematical thinking, intuition and theoretical foundations. Functions: limits, continuity, derivatives, applications. Antiderivative, definite integral, integration techniques. Three lectures, one tutorial; one term',
+        prerequisites: 'Registration in Level I Mathematics and Statistics',
+        antirequisites: 'ARTSSCI 1D06 A/B, MATH 1A03, 1LS3, 1N03, 1Z04, 1ZA3 Not open to students with credit or registration in ISCI 1A24 A/B.',
+        units: '3.0',
+        filter: 'required',
+        prof: 'Caroline Junkins',
+        seats: 'Closed'
+        
+    },
+    {
+        name: 'Calculus II',
+        code: 'MATH 1XX3',
+        description: 'For students in mathematics and statistics. Additional techniques of integration, applications of definite integrals, differential equations, polar coordinates, parametrized curves. Sequences, infinite series, power series. Partial derivatives, double integrals. Three lectures, one tutorial; one term',
+        prerequisites: 'MATH 1X03 and registration in Level I Mathematics and Statistics',
+        antirequisites: 'ARTSSCI 1D06 A/B, MATH 1AA3, 1LT3, 1NN3, 1ZB3, 1ZZ5. Not open to students with credit or registration in ISCI 1A24 A/B.',
+        units: '3.0',
+        filter: 'required',
+        prof: 'Aaron Childs',
+        seats: 'Open'
+        
+    },
+    {
+        name: 'Discrete Mathematics',
+        code: 'COMPSCI 1DM3',
+        description: 'Sets, functions, relations, trees and graphs; counting principles, modular arithmetic, discrete probabilities; induction and recursion, recurrence relations. Three lectures, one tutorial (two hours), second term',
+        prerequisites: 'One of the following: Registration in Computer Science 1 and one of MATH 1B03, 1ZC3; One of MATH 1B03, 1ZC3 with a result of at least B',
+        antirequisites: 'COMPSCI 1FC3, 2DM3, SFWRENG 2DM3, 2E03, 2F03',
+        units: '3.0',
+        filter: 'required',
+        prof: 'Christopher Anand',
+        seats: 'Open'
+        
+    },
+    {
+        name: 'Principles of Programming Languages',
+        code: 'COMPSCI 3MI3',
+        description: 'Principles of definition of and reasoning about programming languages and domain-specific languages; use of semantics for interpretation and in program analyses for correctness, security and efficiency. Three lectures; one tutorial (one hour); first term',
+        prerequisites: 'COMPSCI 2C03, and COMPSCI 2LC3 or 2DM3, and COMPSCI 2AC3 or 2FA3, and COMPSCI 2ME3',
+        antirequisites: 'None',
+        units: '3.0',
+        filter: 'required',
+        prof: 'Jacques Carette',
+        seats: 'Open'
+        
+    },
+    {
+        name: 'Algorithms and Complexity',
+        code: 'COMPSCI 3AC3',
+        description: 'Basic computability models; the Church-Turing thesis, complexity classes; P versus NP; NP-completeness, reduction techniques; algorithmic design strategies; flows, distributed algorithms, advanced techniques such as randomization. Three lectures, one tutorial (one hour), second term',
+        prerequisites: 'COMPSCI 2C03 or SFWRENG 2C03, COMPSCI 2AC3 or 2FA3 or SFWRENG 2FA3',
+        antirequisites: 'None',
+        units: '3.0',
+        filter: 'required',
+        prof: 'Ryszard Janicki',
+        seats: 'Open'
+        
+    },
+    {
+        name: 'Music Therapy',
+        code: 'Music 2MT3',
+        description: 'An introduction to the practice of music therapy, with an emphasis on the diversity of music therapy applications such as: bio-medical, psychoanalytical, behavioural and rehabilitation. Three hours (lecture, web module); one term',
+        prerequisites: 'Registration in Level II or above',
+        antirequisites: 'None',
+        units: '3.0',
+        filter: 'electives',
+        prof: 'Rachael Flannerty',
+        seats: 'Open'
+        
     },
     
 ];
