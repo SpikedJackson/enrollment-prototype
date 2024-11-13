@@ -218,9 +218,6 @@ function Schedule() {
                         )}
                     </div>
                     <div style = {{display: "flex", flexDirection: "row", width: "30%", minWidth: "250px", justifyContent: "space-between"}}>
-                      {/* <button className="no_func">
-                          <img src={require('./images/shuffle.png')} alt="Shuffle" className="button-image" style = {{width: '25px', height: '25px'}} />
-                      </button> */}
                       <button className="no_func">
                           <img src={require('./images/backward-arrow.png')} alt="backward-arrow" className="button-image" style = {{width: '15px', height: '15px'}} />
                       </button>

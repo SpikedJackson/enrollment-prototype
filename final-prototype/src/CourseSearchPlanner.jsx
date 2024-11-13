@@ -42,8 +42,7 @@ const CourseSearchPlanner = () => {
 
     return (
         <>
-            <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%', 
-                // border: '1px solid black'  
+            <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%',  
                 }}>
                 <div style={{ flex: '0 1 300px', paddingRight: '20px' }}>
                     <Filters selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} courses={filteredCourses} />
@@ -86,17 +85,15 @@ const CourseSearchPlanner = () => {
                     </div>
                 )}
             </div>
-
             <div className="box" style={{flex:'0.5'}}>
                 <div className="vertical-stack-container">
                     <YearSelect currentYear = {currentYear} setCurrentYear = {setCurrentYear} allYears={allYears} setAllYears={setAllYears} years={years} setYears={setYears}/>
                     {plannedCourses.length > 0 && <CourseTablePlanner courses={plannedCourses} onCourseRemove = {handleCourseRemove} allYears={allYears} currentYear={currentYear} years={years}/>}
                 </div>
-                
             </div>
             <Link to="/" state = {{plannedCourses}}>
             <div className="to_timetable2" style = {{right: '15px'}}>
-                Proceed to Timetable ▶
+                Return to Home Page ▶
             </div>
             </Link>
         </>
