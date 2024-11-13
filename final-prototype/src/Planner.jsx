@@ -7,7 +7,7 @@ function Planner() {
 
     return (
         <>
-            <Header text = "Planner"/>
+            <Header text = "Academic Planner"/>
             <div className="container">
                 
                 <div className="vertical-stack-container">
