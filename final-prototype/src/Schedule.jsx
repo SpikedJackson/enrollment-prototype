@@ -74,7 +74,7 @@ function Schedule() {
                                   <h3>{selectedCourse.name}</h3>
                                   <p><strong>Code:</strong> {selectedCourse.code}</p>
                                   <p><strong>Professor:</strong> {selectedCourse.prof}</p>
-                                  <p><strong>Seats:</strong> {selectedCourse.seats}</p>
+                                  <p><strong>Seats Open:</strong> {selectedCourse.seats}</p>
                                   <p><strong>Description:</strong> {selectedCourse.description}</p>
                                   <p><strong>Prerequisites:</strong> {selectedCourse.prerequisites}</p>
                                   <p><strong>Antirequisites:</strong> {selectedCourse.antirequisites}</p>
