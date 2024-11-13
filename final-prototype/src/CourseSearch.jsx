@@ -59,18 +59,14 @@ const CourseSearch = () => {
             <div className="vertical-stack-container">
                 <div style = {{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%"}}>
                     <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%', 
-                        // border: '1px solid black'  
                         }}>
                         <div style={{ flex: '0 1 300px', paddingRight: '20px' }}>
                             <Filters selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} 
-                            // courses={filteredCourses} 
                             />
                             <SearchBar 
                             courses={filteredCourses} 
                             onCourseSelect={onCourseSelect} />
-                            
                         </div>
-
                         {selectedCourse && (
                             <div className="course-widget">
                                 <h2>Selected Course Details:</h2>
@@ -85,7 +81,6 @@ const CourseSearch = () => {
                             </div>
                         )}
                     </div>
-
                     <div className="box" style = {{width: "50%"}}>
                         <div className="vertical-stack-container">
                             <div class="help-container">
@@ -99,22 +94,13 @@ const CourseSearch = () => {
                                 {selectedCourses.length > 0 && <CourseTable courses={selectedCourses} onCourseRemove={handleCourseRemove} />}
                             </div>
                         </div>
-                        
                     </div>
-                    
-                    
-                    
-                        
                 </div>
-                    {/* <div style = {{display: "flex", flexDirection: "row", width: "100%"}}> */}
-                        
-                        {/* pass selectedCourses to the Schedule component */}
                 <Link to="/schedule" state={{ selectedCourses }}> 
                     <div className="to_schedule">
                         Proceed to Schedule ▶
                     </div>
                 </Link>
-                    {/* </div> */}
             </div>
         </div>
         </>

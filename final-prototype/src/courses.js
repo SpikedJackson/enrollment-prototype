@@ -86,7 +86,6 @@ const courses  = [
         filter: 'required',
         prof: 'Caroline Junkins',
         seats: 'Closed'
-        
     },
     {
         name: 'Calculus II',
@@ -98,7 +97,6 @@ const courses  = [
         filter: 'required',
         prof: 'Aaron Childs',
         seats: 'Open'
-        
     },
     {
         name: 'Discrete Mathematics',
@@ -110,7 +108,6 @@ const courses  = [
         filter: 'required',
         prof: 'Christopher Anand',
         seats: 'Open'
-        
     },
     {
         name: 'Principles of Programming Languages',
@@ -134,7 +131,6 @@ const courses  = [
         filter: 'required',
         prof: 'Ryszard Janicki',
         seats: 'Open'
-        
     },
     {
         name: 'Music Therapy',
@@ -146,9 +142,7 @@ const courses  = [
         filter: 'electives',
         prof: 'Rachael Flannerty',
         seats: 'Open'
-        
     },
-    
 ];
 
 export default courses;

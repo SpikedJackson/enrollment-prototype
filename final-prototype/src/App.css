@@ -2,7 +2,6 @@
   padding: 20px;
   margin: 10px;
   flex: 1;
-  /* makes all boxes take equal space */
   display: flex;
 }
 
@@ -11,7 +10,6 @@
   display: flex;
   justify-content: space-between;
   padding: 10px;
-  /* min-width: 1100px; */
 }
 
 .App {
@@ -23,7 +21,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  /* align items at the top */
   width: 100%;
   margin-left: auto;
   margin-right: 0;
@@ -73,19 +70,13 @@ input[type="radio"] {
 .search-input {
   padding: 10px;
   font-size: 16px;
-
-
-  /* rounded left corners */
   outline: none;
 }
 
 .select-button {
-  /* padding: 10px 15px; */
-
   border: 2px solid #D4CDF4;
   background-color: #D4CDF4;
   border-radius: 4px;
-  /* rounded corners */
   cursor: pointer;
   transition-duration: 0.4s;
 }
@@ -97,13 +88,9 @@ input[type="radio"] {
 
 .search-dropdown {
   position: absolute;
-  /*z-index: 1000;  Ensure it's on top */
   background-color: white;
-  /* Background for dropdown */
   border: 1px solid #ccc;
-  /* Border for dropdown */
   width: 100%;
-  /* Match input width */
   padding: 0;
   margin: 0;
 }
@@ -128,20 +115,15 @@ input[type="radio"] {
   border: 2px solid #A8E6A3;
   background-color: #A8E6A3;
   border-radius: 4px;
-  /* rounded corners */
   cursor: pointer;
   transition-duration: 0.4s;
 
 }
 
-
 .no_func:hover {
   background-color: #4CAF50;
   border: 2px solid #4CAF50;
 }
-
-
-
 
 table,
 th,
@@ -149,7 +131,6 @@ td {
   border: 1px solid black;
 }
 
-/* added from Planner */
 table {
   display: table;
 }
@@ -214,9 +195,7 @@ table tr td {
   position: relative;
   height: 50px;
   width: 100px;
-  /* Set a fixed width or adjust based on content */
   cursor: pointer;
-  /* Change cursor to indicate it's clickable */
 }
 
 .course-info {
@@ -228,14 +207,10 @@ table tr td {
 
 .delete-button {
   display: none;
-  /* Hide the button by default */
   position: absolute;
   top: 50%;
-  /* Center vertically */
   left: 50%;
-  /* Center horizontally */
   transform: translate(-50%, -50%);
-  /* Adjust positioning for exact centering */
   background: none;
   border: none;
   padding: 0;
@@ -245,21 +220,16 @@ table tr td {
 .delete-button img {
   filter: brightness(0) invert(1);
   width: 24px;
-  /* Adjust the size of the image */
   height: 24px;
-  /* Adjust the size of the image */
   transition: width 0.3s ease, height 0.3s ease;
-  /* Optional smooth transition for resizing */
 }
 
 .course-slot-planner:hover .course-info {
   opacity: 0;
-  /* Hide the course code on hover */
 }
 
 .course-slot-planner:hover .delete-button {
   display: block;
-  /* Show the delete button on hover */
 }
 
 
@@ -275,7 +245,6 @@ table tr td {
   background-color: #38e150;
 }
 
-/* requirements */
 .caret {
   font-size: 18px;
   margin-right: 5px;
@@ -326,7 +295,6 @@ table tr td {
   background-color: white;
 }
 
-/* select year form */
 .form-container {
   display: flex;
   align-items: center;
@@ -384,8 +352,6 @@ table tr td {
   transform: scale(0.9);
 }
 
-/*----------------*/
-
 header {
   background-color: #8B85C1;
   color: white;
@@ -422,16 +388,11 @@ header {
   text-align: center;
 }
 
-
-
 .year-select {
   display: flex;
   flex-direction: row;
 }
 
-
-
-/*Tabs*/
 .tab {
   overflow: hidden;
   margin-bottom: 1px;
@@ -459,11 +420,9 @@ header {
   transition: 0.4s;
   font-size: 17px;
   flex: 1;
-  /* border-bottom: 2px solid transparent;   */
   border-radius: 15px 15px 0 0;
   text-align: center;
   clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
-  /*-*/
 }
 
 .tab button:hover {
@@ -474,45 +433,33 @@ header {
   background-color: #8B85C1;
 }
 
-
-
 .course-container {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
 
-
 .course-box-enrolment {
   display: flex;
-  /* align-items: stretch;  */
   flex-direction: row;
   border: 1px solid #ccc;
   border-radius: 12px;
-  /* Round corners more */
   background: #f9f9f9;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-  /* More pronounced shadow for depth */
   min-height: 75px;
-  /* Increased height for a more substantial feel */
   margin-bottom: 20px;
   width: 300px;
-  /* overflow: hidden; */
   color: white;
-
-  /* Adding a hover effect to make the box interactive */
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .course-box-enrolment:hover {
   transform: translateY(-5px);
-  /* Slight lift effect on hover */
 }
 
 .course-box-enrolment img {
   filter: brightness(0) invert(1);
 }
-
 
 .course-box-schedule {
   display: flex;
@@ -520,19 +467,12 @@ header {
   flex-direction: column;
   border: 1px solid #ccc;
   border-radius: 12px;
-  /* Round corners more */
   background: #f9f9f9;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
-  /* More pronounced shadow for depth */
   min-height: 75px;
-  /* Increased height for a more substantial feel */
   margin-bottom: 20px;
   width: 500px;
   overflow: hidden;
-
-
-
-  /* Adding a hover effect to make the box interactive */
   transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
@@ -542,14 +482,12 @@ header {
 
 .course-box-schedule:hover {
   transform: translateY(-5px);
-  /* Slight lift effect on hover */
 }
 
 .course-box-header {
   display: flex;
   align-items: center;
   border-radius: 12px 12px 0px 0px;
-  /* Round corners more */
   background: #f9f9f9;
   color: white;
   width: 100%;
@@ -562,9 +500,7 @@ header {
 
 .course-widget1 {
   padding: 10px;
-  /* background-color: #f0f0f0; */
   border-top: 1px solid #ccc;
-  /* width: 100%; */
 }
 
 .box3-container {
@@ -583,8 +519,6 @@ header {
   width: 500px;
   height: 100px;
 }
-
-
 
 .course-info {
   display: flex;
@@ -615,9 +549,9 @@ header {
   transform: rotate(-90deg) translate(-70%, -185px);
   transform-origin: center;
   display: flex;
-  justify-content: center; /* Horizontally center the text */
+  justify-content: center;
   align-items: flex-end;
-  padding: 0px; /* Optional: Adjust padding if needed */
+  padding: 0px;
   transition-duration: 0.4s;
   cursor: pointer;
   color: black
@@ -628,16 +562,12 @@ header {
 }
 
 .to_schedule {
-
   border: 2px solid #D4CDF4;
   border-radius: 4px 4px 4px 4px;
   background-color: #D4CDF4;
-  /* margin-left: auto;
-  margin-right: 20px; */
   position: fixed;
   bottom: 15px;
   right: 15px;
-
   padding: 10px 15px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -680,16 +610,11 @@ header {
 }
 
 .to_timetable2 {
-
-  /* float: right; */
   border: 2px solid #D4CDF4;
   border-radius: 4px 4px 4px 4px;
   background-color: #D4CDF4;
-
   position: fixed; 
   bottom: 15px;
-  
-  /* left: 15px; */
   padding: 10px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -701,11 +626,9 @@ header {
 }
 
 .to_timetable2 a {
-
   text-align: center;
   text-decoration: none;
   color: black;
-
 }
 
 .to_timetable2:hover {
@@ -715,13 +638,9 @@ header {
 
 
 .to_enroll {
-
-
   border: 2px solid #D4CDF4;
   border-radius: 4px 4px 4px 4px;
   background-color: #D4CDF4;
-  /* margin-left: auto;
-  margin-right: 20px; */
   position: fixed;
   bottom: 15px;
   right: 15px;
@@ -731,11 +650,9 @@ header {
 }
 
 .to_enroll a {
-
   text-align: center;
   text-decoration: none;
   color: black;
-
 }
 
 .to_enroll:hover {
@@ -743,23 +660,17 @@ header {
   background-color: #8B85C1;
 }
 
-
-
-
 .timetable {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  /* 5 days + 1 column for time */
   grid-auto-rows: 1fr;
   gap: 2px;
-  /* Spacing between cells */
   border: 1px solid #ccc;
   background-color: #fff;
   padding: 10px;
   margin-bottom: 10px;
 }
 
-/* Time Column (First Column) */
 .time-column {
   grid-column: 1;
   background-color: #f0f0f0;
@@ -772,7 +683,6 @@ header {
   padding: 10px;
 }
 
-/* Day Columns */
 .day-column {
   display: flex;
   align-items: center;
@@ -783,7 +693,6 @@ header {
   border: 1px solid #ccc;
 }
 
-/* Course Slot Styling */
 .course-slot {
   display: flex;
   align-items: center;
@@ -796,7 +705,6 @@ header {
   font-weight: bold;
   transition: background-color 0.3s;
 }
-
 
 .light-blue {
   background-color: #6BA4FF;
@@ -818,13 +726,11 @@ header {
   background-color: #df2020;
 }
 
-/* Hover Effect */
 .course-slot:hover {
   opacity: 0.9;
   transform: scale(1.05);
 }
 
-/* Timetable Header Styling */
 .timetable-header {
   grid-column: span 6;
   background-color: #9f98de;
@@ -846,16 +752,3 @@ header {
   margin-left: 20px;
   min-width: 500px;
 }
-
-/* .course-widget button {
-  background-color: #D4CDF4;
-  padding: 10px; 
-  color: white; 
-  border: none; 
-  border-radius: 5px; 
-  cursor: pointer; 
-  margin-top: 10px;
-}
-.course-widget button:hover {
-  background-color: #8B85C1;
-} */
