@@ -13,7 +13,7 @@
 }
 
 .App {
-  min-width: 1400px;
+  min-width: 1600px;
 }
 
 .vertical-stack-container {
@@ -195,6 +195,25 @@ table tr td {
   position: relative;
   height: 50px;
   width: 100px;
+  cursor: pointer;
+}
+
+.course-slot-planner-single-year {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  position: relative;
+  height: 50px;
+  width: 140px;
   cursor: pointer;
 }
 

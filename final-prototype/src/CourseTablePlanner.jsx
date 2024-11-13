@@ -45,7 +45,7 @@ const CourseTablePlanner = ({ courses, onCourseRemove, allYears, currentYear, ye
                                 <div class="course-row">
                                     {courses.map((course) => (
                                         (course.year === currentYear) &&
-                                        <div class="course-slot-planner planned" onClick={() => onCourseRemove(course)}>
+                                        <div class="course-slot-planner-single-year planned" onClick={() => onCourseRemove(course)}>
                                             {displayCourse(course)}
                                         </div>
                                     ))}
@@ -54,7 +54,7 @@ const CourseTablePlanner = ({ courses, onCourseRemove, allYears, currentYear, ye
                                 <div class="course-row">
                                     {courses.map((course) => (
                                         (course.year === currentYear && false) &&
-                                        <div class="course-slot-planner enrolled">
+                                        <div class="course-slot-planner-single-year enrolled">
                                             {displayCourse(course)}
                                         </div>
                                     ))}
@@ -63,7 +63,7 @@ const CourseTablePlanner = ({ courses, onCourseRemove, allYears, currentYear, ye
                                 <div class="course-row">
                                     {courses.map((course) => (
                                         (course.year === currentYear && false) &&
-                                        <div class="course-slot-planner completed">
+                                        <div class="course-slot-planner-single-year completed">
                                             {displayCourse(course)}
                                         </div>
                                     ))}
