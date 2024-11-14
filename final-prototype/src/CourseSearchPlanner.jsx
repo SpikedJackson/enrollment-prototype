@@ -42,9 +42,9 @@ const CourseSearchPlanner = () => {
 
     return (
         <>
-            <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%',  
+            <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%'  
                 }}>
-                <div style={{ flex: '0 1 300px', paddingRight: '20px' }}>
+                <div style={{ flex: '0 1 300px', paddingRight: '20px'}}>
                     <Filters selectedFilter={selectedFilter} setSelectedFilter={setSelectedFilter} courses={filteredCourses} />
                     <SearchBar 
                     courses={filteredCourses} 

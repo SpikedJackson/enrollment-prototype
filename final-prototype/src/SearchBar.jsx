@@ -28,7 +28,9 @@ const SearchBar = ({ courses, onCourseSelect }) => {
     };
 
     return (
-        <div style={{ position: 'relative'}}>
+        <div 
+        style={{ position: 'relative'}}
+        >
             <div style={{ display: 'flex', alignItems: 'center', gap: '5px' }}>
                 <div className="select-container">
                     <input
