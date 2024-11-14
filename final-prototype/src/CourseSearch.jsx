@@ -45,7 +45,7 @@ const CourseSearch = () => {
             </Link>
             <div className="vertical-stack-container">
                 <div style = {{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%"}}>
-                    <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%',
+                    <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%', flex: '0.6'
                         }}>
 
                         
@@ -71,7 +71,7 @@ const CourseSearch = () => {
                             </div>
                         )}
                     </div>
-                    <div className="box" style = {{width: "50%"}}>
+                    <div className="box" style = {{flex: '0.4'}}>
                         <div className="vertical-stack-container">
                             <div class="help-container">
                                 <button class="select-button">
