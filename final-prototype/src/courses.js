@@ -8,7 +8,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Ryszard Janicki',
-        seats: 'Open'
+        seats: '100/200'
     },
     {
         name: 'Data Structures and Algorithms',
@@ -19,7 +19,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Nick Moore',
-        seats: 'Open'
+        seats: '50/200'
     },
     {
         name: 'Databases',
@@ -30,7 +30,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Jelle Hellings',
-        seats: 'Closed'
+        seats: '0/200'
     },
     {
         name: 'Computer Architecture',
@@ -41,7 +41,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Hans Boden',
-        seats: 'Closed'
+        seats: '0/200'
     },
     {
         name: 'Logical Reasoning for Computer Science',
@@ -52,7 +52,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Ryszard Janicki',
-        seats: 'Open'
+        seats: '150/200'
     },
     {
         name: 'Introduction to Software Development',
@@ -63,7 +63,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Vincent Maccio',
-        seats: 'Closed'
+        seats: '0/200'
     },
     {
         name: 'The Big Questions',
@@ -74,7 +74,7 @@ const courses  = [
         units: '3.0',
         filter: 'electives',
         prof: 'Robert Cockcroft',
-        seats: 'Closed'
+        seats: '0/200'
     },
     {
         name: 'Calculus I',
@@ -85,7 +85,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Caroline Junkins',
-        seats: 'Closed'
+        seats: '0/200'
     },
     {
         name: 'Calculus II',
@@ -96,7 +96,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Aaron Childs',
-        seats: 'Open'
+        seats: '10/200'
     },
     {
         name: 'Discrete Mathematics',
@@ -107,7 +107,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Christopher Anand',
-        seats: 'Open'
+        seats: '30/200'
     },
     {
         name: 'Principles of Programming Languages',
@@ -118,7 +118,7 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Jacques Carette',
-        seats: 'Open'
+        seats: '100/200'
         
     },
     {
@@ -130,18 +130,18 @@ const courses  = [
         units: '3.0',
         filter: 'required',
         prof: 'Ryszard Janicki',
-        seats: 'Open'
+        seats: '120/200'
     },
     {
         name: 'Music Therapy',
-        code: 'Music 2MT3',
+        code: 'MUSIC 2MT3',
         description: 'An introduction to the practice of music therapy, with an emphasis on the diversity of music therapy applications such as: bio-medical, psychoanalytical, behavioural and rehabilitation. Three hours (lecture, web module); one term',
         prerequisites: 'Registration in Level II or above',
         antirequisites: 'None',
         units: '3.0',
         filter: 'electives',
         prof: 'Rachael Flannerty',
-        seats: 'Open'
+        seats: '20/200'
     },
 ];
 

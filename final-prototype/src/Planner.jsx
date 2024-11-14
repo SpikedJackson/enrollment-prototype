@@ -7,12 +7,12 @@ function Planner() {
 
     return (
         <>
-            <Header text = "Planner"/>
+            <Header text = "Academic Planner"/>
             <div className="container">
                 
                 <div className="vertical-stack-container">
                     <div style = {{display: "flex", flexDirection: "row", width: "100%"}}>
-                        <div className="box" style={{flex:'0.3'}}>
+                        <div className="box" style={{flex:'0.3', padding: '0px'}}>
                             <Requirements />
                         </div>
                         <CourseSearchPlanner />

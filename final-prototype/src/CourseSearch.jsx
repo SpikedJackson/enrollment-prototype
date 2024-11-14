@@ -36,7 +36,7 @@ const CourseSearch = () => {
 
     return (
         <>
-        <Header text = "TimeTable Home Page"/>
+        <Header text = "Timetable Home Page"/>
         <div className="container">
             <Link to="/planner">
                 <div className="to_planner">
