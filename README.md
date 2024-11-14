@@ -1,4 +1,5 @@
 The final project code is located in final-prototype and can be opened by opening index.html in the build folder.
+The report is called Group 8_Milestone 3.pdf and it is not in a folder.
 The old folder contains previous iterations of our prototypes and before they were combined 
 
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/n6Ew1Zll)
