@@ -1,6 +1,5 @@
 
 import './App.css';
-import Header from './Header';
 import Schedule from './Schedule';
 import CourseSearch from './CourseSearch';
 import Planner from './Planner'
