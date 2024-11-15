@@ -45,7 +45,7 @@ const SearchBar = ({ courses, onCourseSelect, plannedCourses}) => {
     };
 
     const handleSetColour = (course,target) => {
-        if (course==selectedCourse){
+        if (course===selectedCourse){
           target.style.backgroundColor = '#E6E3F3';}
         else {
           target.style.backgroundColor = 'white';}
@@ -98,7 +98,7 @@ const SearchBar = ({ courses, onCourseSelect, plannedCourses}) => {
                                   borderBottom: '1px solid #D4CDF4',
                                   borderRight: '1px solid #D4CDF4',
                                   borderLeft: '1px solid #D4CDF4',
-                                  backgroundColor: (course==selectedCourse) ? '#E6E3F3' : 'white',
+                                  backgroundColor: (course===selectedCourse) ? '#E6E3F3' : 'white',
                               }}
                               onMouseEnter={(e) => e.target.style.backgroundColor = '#D4CDF4'}
                               onMouseLeave={(e) => handleSetColour(course,e.target)}
@@ -116,7 +116,7 @@ const SearchBar = ({ courses, onCourseSelect, plannedCourses}) => {
     return(
     <div className="vertical-stack-container">
         <div style = {{display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100%"}}>
-            <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%',}}>
+            <div className="box" style={{ display: 'flex', alignItems: 'flex-start', width: '100%', padding: '0px'}}>
 
                 <div style={{ flex: '0 1 300px', paddingRight: '20px' }}>
                 {tabs()}
